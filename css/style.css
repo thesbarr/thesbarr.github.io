@@ -1033,7 +1033,7 @@ textarea.form-control { resize: vertical; }
 /*Contact map*/
 .contact-map { height: 600px; }
 .contact-map .container-fluid { padding: 0px; }
-.contact-map .container-fluid iframe { border: 0px; width: 100%; height: 400px; position: center; }
+.contact-map .container-fluid iframe { border: 0px; width: 100%; height: 600px; position: center; }
 
 /*********************************
         Team single page
