@@ -776,7 +776,7 @@ div#main { z-index: 1; position: relative; }
 /* Footer BG */
 .footer.footer-bg h6 { color: #fff; }
 .contact-box.top .section-title { margin-bottom: 0px; }
-.footer.footer-bg.footer-topbar .top { margin-top: 60px; }
+.footer.footer-bg.footer-topbar .top { margin-top: 0px; }
 .footer.footer-bg .footer-nav ul li a:hover { color: #2046f2; }
 .footer.footer-bg .usefull-link ul li a:hover { color: #2046f2; }
 .footer.footer-bg .social ul li a i { color: #353535; }
