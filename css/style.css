@@ -749,7 +749,7 @@ ul.list-style-icon li span { color: #2046f2; padding-right: 15px; }
 div#main { z-index: 1; position: relative; }
 
 /*Footer dark topbar*/
-.footer-dark { padding: 70px 0px 0px; }
+.footer-dark { padding: 0px 0px 0px; }
 .footer-dark { position: fixed; left: 0; bottom: 0; width: 100%; z-index: 0; }
 .footer-dark .footer-logo img { height: 50px; }
 .footer-dark .addresss-icon { float: left; font-size: 24px; margin-right: 20px; }
