@@ -282,7 +282,7 @@
   line-height: 50px;
 }
 .mega-menu .menu-social-bar > li[data-color='blue'] > a:hover {
-  background-color: #3b5998;
+  background-color: #f8b800;
 }
 .mega-menu .menu-social-bar > li[data-color='sky-blue'] > a:hover {
   background-color: #2caae1;
@@ -358,7 +358,7 @@
   line-height: 50px;
 }
 .mega-menu .menu-search-bar li:hover i.fa.fa-search {
-  background: #2046f2;
+  background: #f8b800;
 }
 .mega-menu .menu-search-bar input {
   max-width: 0;
