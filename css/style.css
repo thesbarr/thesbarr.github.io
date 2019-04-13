@@ -297,7 +297,7 @@ body {
 /***************************
 	      button
 ***************************/
-.button { background: #2046f2; padding: 10px 30px; color: #ffffff; border: 2px solid #2046f2; text-transform: uppercase; font-weight: 400; display: inline-block; border-radius: 30px; text-align: center; }
+.button { background: rgba(248, 184, 0, 1); padding: 10px 30px; color: #ffffff; border: 2px solid rgba(248, 184, 0, 1); text-transform: uppercase; font-weight: 400; display: inline-block; border-radius: 30px; text-align: center; }
 .button:hover { background: #353535; color: #ffffff; border-color: #353535; }
 .button.black { background: #353535; color: #ffffff; border: 2px solid #353535; }
 .button.black:hover, .button.black.active { background: #2046f2; color: #ffffff; border-color: #2046f2; }
