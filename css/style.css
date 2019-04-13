@@ -659,7 +659,7 @@ position: fixed; z-index: 2; height: 100%; width: 100%; top: 0; left: 0; cursor:
 
 /* List right */
 ul.list-mark li { list-style-type: none; padding-left: 25px; position: relative; }
-ul.list-mark li:after { content: "\f00c"; font-family: 'FontAwesome'; position: absolute; left: 0; top: 0; color: #2046f2; }
+ul.list-mark li:after { content: "\f00c"; font-family: 'FontAwesome'; position: absolute; left: 0; top: 0; color: #000000; }
 
 /* List checkbox */
 ul.list-style-right li { list-style-type: none; position: relative; font-weight: bold; color: #353535; font-size: 16px; }
