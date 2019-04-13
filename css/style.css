@@ -81,7 +81,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 		 General
 ***************************/
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
-body { font-family: 'Poppins', sans-serif; font-weight: normal; font-style: normal; font-size: 14px; line-height: 24px; color: #aaaaaa; }
+body { font-family: 'Poppins', sans-serif; font-weight: normal; font-style: normal; font-size: 16px; line-height: 24px; color: #000000; }
 a, .btn { -webkit-transition: all 0.5s ease-out 0s; -moz-transition: all 0.5s ease-out 0s; -ms-transition: all 0.5s ease-out 0s; -o-transition: all 0.5s ease-out 0s; transition: all 0.5s ease-out 0s; color: #353535; }
 a:focus { text-decoration: none !important; }
 a:focus, a:hover { color: #2046f2; text-decoration: none !important; }
