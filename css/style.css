@@ -258,26 +258,27 @@ body {
     margin-bottom: 0.5em;
 }
 
+/*
 .hero .btn {
-    /* Positioning and sizing */
+    Positioning and sizing
 	display: block;
     width: 200px;
     
-    /* Padding and margins */
+    Padding and margins
     padding: 1em;
     margin-top: 550px;
     margin-left: auto;
     margin-right: auto;
     
-    /* Text styles */
-    color: white; /* CHANGE THIS LINE */
+    Text styles 
+    color: white;
     text-decoration: none;
     font-size: 1.5em;
     
-    /* Border styles */
-    /* border: 3px solid white; /* CHANGE THIS LINE */
-    /* border-radius: 20px;*/
-}
+    Border styles 
+    border: 3px solid white; 
+	border-radius: 20px;	
+}*/	
 /***************************
 		   form
 ***************************/
