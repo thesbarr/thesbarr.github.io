@@ -224,7 +224,7 @@ select { width: 100%; background: #f6f7f8; border: 0px; padding: 15px 18px 15px 
 .resume {
     /* Sizing */
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     
     /* Flexbox stuff */
     display: flex;
