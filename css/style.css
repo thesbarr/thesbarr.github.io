@@ -219,6 +219,36 @@ select { width: 100%; background: #f6f7f8; border: 0px; padding: 15px 18px 15px 
 .section-title span { display: block; text-transform: uppercase; font-size: 16px; font-family: 'Poppins', sans-serif; font-weight: 700; margin-bottom: 10px; }
 
 /***************************
+		   Hero
+***************************/
+
+body, html {
+    height: 100%;
+}
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/SBarr-Headshot-Web.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+/***************************
 		   form
 ***************************/
 .form-control { border-radius: 30px; height: auto; line-height: 1.33333; padding: 15px 18px 15px 30px; background: transparent; color: #aaaaaa; border: 1px solid transparent; box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1); }
