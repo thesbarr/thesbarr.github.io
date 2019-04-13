@@ -275,8 +275,8 @@ body {
     font-size: 1.5em;
     
     /* Border styles */
-    border: 3px solid white; /* CHANGE THIS LINE */
-    border-radius: 20px;
+    /* border: 3px solid white; /* CHANGE THIS LINE */
+    /* border-radius: 20px;*/
 }
 /***************************
 		   form
