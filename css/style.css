@@ -830,8 +830,8 @@ div#main { z-index: 1; position: relative; }
 
 /*footer bottom*/
 .footer-dark .copyright { background: #222528; padding: 30px 0 20px; }
-.footer-dark .copyright ul li a { color: #aaaaaa; text-transform: capitalize; }
-.footer-dark .copyright ul li a:hover { color: #fff; }
+.footer-dark .copyright ul li a { color: #fff; text-transform: capitalize; }
+.footer-dark .copyright ul li a:hover { color: #f8b800; }
 
 /* Footer BG */
 .footer.footer-bg h6 { color: #fff; }
