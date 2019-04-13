@@ -260,7 +260,7 @@ body {
 
 .hero .btn {
     /* Positioning and sizing */
-    display: block;
+	display: block;
     width: 200px;
     
     /* Padding and margins */
