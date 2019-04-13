@@ -139,7 +139,7 @@ select { width: 100%; background: #f6f7f8; border: 0px; padding: 15px 18px 15px 
 /************************************
     Page section margin padding 
 *************************************/
-.page-section-ptb { padding: 100px 0; }
+.page-section-ptb { padding: 60px 0; }
 .page-section-pt { padding: 100px 0 0; }
 .page-section-pb { padding: 0 0 100px; }
 .mt-0 { margin-top: 0px; }
