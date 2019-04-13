@@ -98,9 +98,9 @@ ul { margin: 0px; padding: 0px; }
 hr { margin: 0; padding: 0px; border-bottom: 1px solid #e0e0e0; border-top: 0px; }
 label { font-size: 15px; font-weight: 400; color: #aaaaaa; }
 .label { color: #fff !important; font-size: 9px !important; }
-*::-moz-selection { background: #2046f2; color: #fff; text-shadow: none; }
-::-moz-selection { background: #2046f2; color: #fff; text-shadow: none; }
-::selection { background: #2046f2; color: #fff; text-shadow: none; }
+*::-moz-selection { background: #2046f2; color: rgb(0, 0, 0); text-shadow: none; }
+::-moz-selection { background: #2046f2; color: rgb(0, 0, 0); text-shadow: none; }
+::selection { background: #2046f2; color: rgb(0, 0, 0); text-shadow: none; }
 
 /***************************
 	    typography
