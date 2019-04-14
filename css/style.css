@@ -461,7 +461,7 @@ opacity: 0; }
 opacity: 1; }
 .search-trigger.search-is-visible span::before { -webkit-transform: rotate(135deg); -moz-transform: rotate(135deg); -ms-transform: rotate(135deg); -o-transform: rotate(135deg); transform: rotate(135deg); }
 .search-trigger.search-is-visible span::after { -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg); }
-.search { background: #2046f2; position: absolute; height: 50px; width: 100%; top: 50px; left: 0; z-index: 9999; opacity: 0; visibility: hidden; -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s; transition: opacity .3s 0s, visibility 0s .3s; }
+.search { background: #f8b800; position: absolute; height: 50px; width: 100%; top: 50px; left: 0; z-index: 9999; opacity: 0; visibility: hidden; -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s; transition: opacity .3s 0s, visibility 0s .3s; }
 .search form { height: 100%; width: 100%; }
 .search input { border-radius: 0; border: none; background: transparent; color: #ffffff; height: 100%; width: 100%; padding: 0; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; }
 .search input::-webkit-input-placeholder { color: #c9cbc4; }
@@ -596,7 +596,7 @@ position: fixed; z-index: 2; height: 100%; width: 100%; top: 0; left: 0; cursor:
 #header.transparent .search-trigger::before { border-color: #ffffff; }
 #header.transparent .search-trigger::after { background: #ffffff; }
 #header.transparent .side-menu .mobile-nav-button .mobile-nav-button-line { background: #ffffff; }
-#header.transparent .search-trigger span::before, #header.transparent .search-trigger span::after { background: #ffffff; }
+#header.transparent .search-trigger span::before, #header.transparent .search-trigger span::after { background: #f8b800; }
 .search.header.transparent { top: 120px; }
 .search.header.transparent .container-fluid { padding: 0 56px; }
 #header.transparent .mega-menu .menu-links > li.active .drop-down-multilevel li a { color: #353535; }
