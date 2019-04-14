@@ -40,6 +40,13 @@
 	<!-- Responsive style -->
     <link rel="stylesheet" type="text/css" href="css/responsive.css" />
     
+    <!-- DC jflickrfeed -->
+    <link href="http://cdn.dcodes.net/2/flickr/css/dc_jflickrfeed.css" type="text/css" rel="stylesheet" />
+    <script src="http://cdn.dcodes.net/2/flickr/js/jflickrfeed.js"></script>
+
+    <!-- DC jflickrfeed: Colorbox Lightbox -->
+    <link href="http://cdn.dcodes.net/2/flickr/js/colorbox/colorbox.css" rel="stylesheet" type="text/css" media="screen" /> 
+    <script src="http://cdn.dcodes.net/2/flickr/js/colorbox/jquery.colorbox-min.js"></script>
     </head>
 
 <body>
@@ -157,7 +164,7 @@ welcome -->
             <div class="row">
                 <div class="col-lg-4 col-sm-12">
                     <h3 class="mb-3">A Few Highlights Oustide of VCU</h3>
-                    <p class="mb-2">Check out these outside the job events that I am or have been part of.</p>
+                    <p class="mb-2">Check out these "outside the job" events that I am or have been part of.</p>
                     <ul class="list-mark mb-3">
                         <li> Elected to the NACAS East Board</li>
                         <li> Obtained my CASP Accreditation.</li>
@@ -183,44 +190,28 @@ welcome -->
     </section>
     <!--=================================
 welcome -->
-    <!--=================================
-counter-->
-    <section class="counter page-section-ptb bg fixed bg-overlay-black-80" style="background:url(images/bg/02.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 text-center">
-                    <div class="counter-block">
-                        <span class="ti-cloud-up"></span>
-                        <b class="timer mt-3" data-to="3968" data-speed="10000">31,268</b>
-                        <h6 class="text-white mt-3">Drip Coffees Sold in 2018</h6>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 text-center">
-                    <div class="counter-block">
-                        <span class="ti-bar-chart"></span>
-                        <b class="timer mt-3" data-to="5568" data-speed="10000">5568</b>
-                        <h6 class="text-white mt-3">QUESTIONS ANSWERED</h6>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 text-center">
-                    <div class="counter-block">
-                        <span class="ti-panel"></span>
-                        <b class="timer mt-3" data-to="8908" data-speed="10000">8908</b>
-                        <h6 class="text-white mt-3">COMPLETED PROJECTS</h6>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 text-center">
-                    <div class="counter-block">
-                        <span class="ti-shield"></span>
-                        <b class="timer mt-3" data-to="9968" data-speed="10000">9968</b>
-                        <h6 class="text-white mt-3">HAPPY CLIENTS</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--=================================
-counter-->
+
+<!-- DC Flickr Feed Start -->
+<div id="dc_jflickr_feed_container" style="width:80%;">
+        <ul id="jflickr_cbox" class="dc_jflickr_thumbs"></ul>
+      </div>
+      <!-- DC Flickr Feed End -->
+      <div class="dc_clear"></div> <!-- line break/clear line --> 
+      
+      <!-- DC Flickr Feed Settings --> 
+      <script type="text/javascript">
+          $('#jflickr_cbox').jflickrfeed({
+              limit: 16, // number of images to show
+              qstrings: { id: '92042994@N08' // id of flickr gallery (use idgettr.com to get flickr gallery id)
+              },
+              // Small images: {{image_s}}
+              // Medium images: {{image}}
+              // Large images: {{image_b}}
+              itemTemplate: '<li>' + '<a rel="colorbox" href="{{image_b}}" title="{{title}}">' + '<img src="{{image_s}}" alt="{{title}}" />' + '</a>' + '</li>'
+          }, function(data) {
+              $('#jflickr_cbox a').colorbox();
+          });
+      </script>
 
 
 <!--=================================
