@@ -464,10 +464,10 @@ opacity: 1; }
 .search { background: #f8b800; position: absolute; height: 50px; width: 100%; top: 50px; left: 0; z-index: 9999; opacity: 0; visibility: hidden; -webkit-transition: opacity .3s 0s, visibility 0s .3s; -moz-transition: opacity .3s 0s, visibility 0s .3s; transition: opacity .3s 0s, visibility 0s .3s; }
 .search form { height: 100%; width: 100%; }
 .search input { border-radius: 0; border: none; background: transparent; color: #ffffff; height: 100%; width: 100%; padding: 0; box-shadow: none; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; }
-.search input::-webkit-input-placeholder { color: #c9cbc4; }
-.search input::-moz-placeholder { color: #c9cbc4; }
-.search input:-moz-placeholder { color: #c9cbc4; }
-.search input:-ms-input-placeholder { color: #c9cbc4; }
+.search input::-webkit-input-placeholder { color: #ffffff; }
+.search input::-moz-placeholder { color: #ffffff; }
+.search input:-moz-placeholder { color: #ffffff; }
+.search input:-ms-input-placeholder { color: #ffffff; }
 .search input:focus { outline: none; }
 .search.is-visible { opacity: 1; visibility: visible; -webkit-transition: opacity .3s 0s, visibility 0s 0s; -moz-transition: opacity .3s 0s, visibility 0s 0s; transition: opacity .3s 0s, visibility 0s 0s; }
 .nav-is-fixed .search { position: fixed; }
