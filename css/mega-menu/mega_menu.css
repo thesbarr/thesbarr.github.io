@@ -1225,7 +1225,7 @@
 
 .mega-menu .drop-down a:hover,
 .mega-menu .drop-down-tab-bar a:hover {
-  color: #2046f2;
+  color: #f8b800;
 }
 .mega-menu .drop-down a i,
 .mega-menu .drop-down-tab-bar a i {
@@ -1238,7 +1238,7 @@
 
 .mega-menu .drop-down a:hover i,
 .mega-menu .drop-down-tab-bar a:hover i {
-  color: #2046f2;
+  color: #f8b800;
 }
 
 @media screen and (max-width: 992px) {
@@ -1800,7 +1800,7 @@
   .mega-menu.vertical-right .menu-search-bar input, .mega-menu.vertical-right .menu-search-bar li, .mega-menu.vertical-right .menu-search-bar form, .mega-menu.vertical-right .menu-search-bar label {
     width: 100%;
     max-width: 100%;
-    background: #2046f2;
+    background: #f8b800;
     -webkit-transition: none;
             transition: none;
   }
