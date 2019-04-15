@@ -169,26 +169,10 @@ contact from -->
                 </div>
                 <div class="col-md-12">
                     <div id="formmessage" style="display:none">Thank you! I will get back to you as soon as possible.</div>
-                    <form id="contactform" class="gray-form row" role="form" method="post" action="php/contact-form.php">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="from" class="form-control" id="exampleInputphone" placeholder="Your Name">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email Adress">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <textarea class="form-control" rows="7" placeholder="Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <input type="hidden" name="action" value="sendEmail"/>
-                            <button id="submit" name="submit" type="submit" value="Send" class="button"><span>Submit</span></button>
-                        </div>
+                    <form action="https://formspree.io/stephen@stephenabarr.com">
+                        <input type="text" name="name">
+                        <input type="email" name="_replyto">
+                        <input type="submit" value="Send">
                     </form>
                     <div id="ajaxloader" style="display:none"><img class="center-block" src="images/form-loader.gif" alt=""></div> 
                 </div>
