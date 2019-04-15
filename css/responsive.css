@@ -458,14 +458,6 @@ Note: This is responsive CSS of the template.
     blockquote.default { padding-left: 20px; padding-top: 80px; }
 	blockquote.default:before { left: 10px; top: 50px; }
 
-
-	/* Rev Slider*/
-	.rev-left-button{left: -15% !important}
-	.rev-right-button{left: 35% !important}
-	.button.rev-btn { padding: 5px 15px !important; border-radius: 20px !important; font-size: 12px !important; line-height: 18px !important; top: 15px;}
-	.packages-text{font-size: 12px !important}
-
-	.back-to-top{right: 7%;}
 	
 	/* Shop */
 	.sidebar-widgets-wrap{margin-top:50px;}
