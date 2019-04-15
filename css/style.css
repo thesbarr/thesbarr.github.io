@@ -267,7 +267,7 @@ body {
     color: white; /* ADD THIS LINE */
     
     /* Background styles */
-    background-image: url('../images/SBarr-Headshot-Web.webp');
+    background-image: url('../images/SBarr-Headshot-Web.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1425,23 +1425,6 @@ textarea.form-control { resize: vertical; }
 .map-location-tooltip .tooltip-east .tooltip-content::before, .map-location-tooltip .tooltip-east .tooltip-content::after { left: 99%; }
 .map-location-tooltip .tooltip-east .tooltip-content::after { -webkit-transform: scale3d(-1, 1, 1); -o-transform: scale3d(-1, 1, 1); -ms-transform: scale3d(-1, 1, 1); -moz-transform: scale3d(-1, 1, 1); transform: scale3d(-1, 1, 1); }
 
-/********************************
-       		rev slider
-********************************/
-
-/*home-5*/
-.hesperiden.tparrows { cursor: pointer; background: rgba(0, 0, 0, 0.5); width: 40px; height: 40px; position: absolute; display: block; z-index: 100; border-radius: 50% }
-.hesperiden.tparrows:hover { background: rgba(0, 0, 0, 1) }
-.hesperiden.tparrows:before { font-family: "revicons"; font-size: 20px; color: rgb(255, 255, 255); display: block; line-height: 40px; text-align: center }
-.hesperiden.tparrows.tp-leftarrow:before { content: "\e82c"; margin-left: -3px }
-.hesperiden.tparrows.tp-rightarrow:before { content: "\e82d"; margin-right: -3px }
-
-/*home -1*/
-.hesperiden.tparrows { cursor: pointer; background: rgba(0, 0, 0, 0.5); width: 40px; height: 40px; position: absolute; display: block; z-index: 100; border-radius: 50% }
-.hesperiden.tparrows:hover { background: rgba(0, 0, 0, 1) }
-.hesperiden.tparrows:before { font-family: "revicons"; font-size: 20px; color: rgb(255, 255, 255); display: block; line-height: 40px; text-align: center }
-.hesperiden.tparrows.tp-leftarrow:before { content: "\e82c"; margin-left: -3px }
-.hesperiden.tparrows.tp-rightarrow:before { content: "\e82d"; margin-right: -3px }
 
 /********************************
        	  Fancy - Team  
