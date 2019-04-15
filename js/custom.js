@@ -463,28 +463,6 @@ var POTENZA = {};
       }
   }
   
-/*************************
-  Php Contact Form 
-*************************/
-POTENZA.Contactform = function () {
-  $( "#contactform").submit(function( event ) {
-    $("#ajaxloader").show();
-    $("#contactform").hide();
-    $.ajax({
-      url:'php/contact-form.php',
-      data:$(this).serialize(),
-      type:'post',
-      success:function(response){
-        $("#ajaxloader").hide();
-        $("#contactform").show();
-        $("#contactform").find("input, textarea").val("");
-        $("#formmessage").html(response).show().delay(2000).fadeOut('slow');
-      }
-    });
-    event.preventDefault();
-  });
-}
-
 /****************************************************
      POTENZA Window load and functions
 ****************************************************/
