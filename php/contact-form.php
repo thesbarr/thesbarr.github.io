@@ -5,9 +5,9 @@ if(isset($_POST["action"])) {
 	$phone  = $_POST['phone'];     // Sender's email address
 	$website  = $_POST['website'];     // Sender's website
 	$message = $_POST['message'];    // Sender's message
-	$from = 'Demo Contact Form';    
-	$to = 'Demo@domian.com';     // Recipient's email address
-	$subject = 'Message from Contact Demo ';
+	$from = 'SBarr Website Contact Form';    
+	$to = 'stephen@stephenabarr.com';     // Recipient's email address
+	$subject = 'SBarr Website Contact Form';
 
 	//$body = " From: $name \n E-Mail: $email \n Phone : $phone \n Message : $message"  ;
 	$body = "From: $name \n";   
