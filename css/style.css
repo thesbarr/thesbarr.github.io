@@ -307,11 +307,11 @@ body {
 		   form
 ***************************/
 .form-control { border-radius: 30px; height: auto; line-height: 1.33333; padding: 15px 18px 15px 30px; background: transparent; color: #aaaaaa; border: 1px solid transparent; box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.1); }
-.form-control:focus { box-shadow: none; border: 1px solid #2046f2; }
+.form-control:focus { box-shadow: none; border: 1px solid #000000; }
 .form-control.input-lg { resize: none; font-size: .9em }
 .form-control.rounded { border-radius: 0px; }
 .input-group-addon { border: 1px solid #e0e0e0; }
-.form-group label { color: #353535; display: inline-block; margin-top: 8px; margin-bottom: 4px; text-transform: uppercase; font-size: 13px; }
+.form-group label { color: #000000; display: inline-block; margin-top: 8px; margin-bottom: 4px; text-transform: uppercase; font-size: 13px; }
 .form-inline button { margin: 0px; }
 .form-group > label { display: block; }
 .form-control::-moz-placeholder { color: #aaaaaa; }
