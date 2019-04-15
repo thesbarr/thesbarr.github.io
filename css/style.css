@@ -267,7 +267,7 @@ body {
     color: white; /* ADD THIS LINE */
     
     /* Background styles */
-    background-image: url('../images/SBarr-Headshot-Web.jpg');
+    background-image: url('../images/SBarr-Headshot-Web.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
