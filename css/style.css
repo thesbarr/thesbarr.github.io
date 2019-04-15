@@ -67,6 +67,7 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 :: rev slider
 :: Fancy - Team
 :: Comming Soon
+:: rev_slider
 :: Back to top
 :: shop
 
@@ -1170,6 +1171,27 @@ textarea.form-control { resize: vertical; }
 .clients-info a.button:hover { color: #fff; }
 
 /***************************
+	     login 
+***************************/
+.login-form .login-social ul { display: block; margin-top: 20px; }
+.login-form .login-social ul li { display: inline-block; width: 100%; margin-bottom: 15px; text-align: center; }
+.login-form .login-social ul li a { padding: 10px 20px; border: 1px solid #f6f6f6; color: #2046f2; display: inline-block; width: 100%; border-radius: 30px; }
+.login-form .login-social ul li a i { padding-right: 15px; }
+.login-form .login-social ul li a.fb { background: #4c70ad; color: #ffffff; border-color: #4c70ad; }
+.login-form .login-social ul li a.twitter { background: #25b6e6; color: #ffffff; border-color: #25b6e6; }
+.login-form .login-social ul li a.pinterest { background: #dd4b39; color: #ffffff; border-color: #dd4b39; }
+.login-form .login-social ul li a:hover { background: #353535; border-color: #353535; }
+
+/***************************
+	     Register 
+***************************/
+.gray-form label { color: #353535; display: inline-block; margin-top: 8px; margin-bottom: 4px; text-transform: uppercase; font-size: 13px; }
+.gray-form > label { display: block; }
+.gray-form .field-widget { position: relative; }
+.gray-form .field-widget .form-control { padding-left: 130px; }
+.gray-form .field-widget .tag { background: #e9e9e9; color: #aaaaaa; height: 50px; left: 0; line-height: 50px; margin: 0px; position: absolute; text-align: center; top: 0; width: 120px; -moz-border-radius-topleft: 90px; -webkit-border-top-left-radius: 90px; border-top-left-radius: 90px; -moz-border-radius-bottomleft: 90px; -webkit-border-bottom-left-radius: 90px; border-bottom-left-radius: 90px; }
+
+/***************************
 	       TAB 
 ***************************/
 .nav.nav-tabs { border: none; text-align: center; margin-bottom: 30px; }
@@ -1325,6 +1347,10 @@ textarea.form-control { resize: vertical; }
 .provide-services .play-video a { display: block; position: absolute; text-indent: inherit; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); left: 50%; margin-left: -35px; width: 100%; color: #ffffff; font-size: 40px; border: 2px solid #ffffff; border-radius: 50%; width: 80px; height: 80px; line-height: 80px; text-align: center; padding-left: 10px; }
 .provide-services .play-video a:hover { border-color: #2046f2; background: #2046f2; }
 
+/********************************
+	        About SEO
+********************************/
+.about-seo { padding: 60px 70px; }
 
 /********************************
           owl-carousel      
@@ -1470,3 +1496,59 @@ textarea.form-control { resize: vertical; }
 .back-to-top.show { bottom:0% !important; -webkit-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
 .back-to-top.back-run { bottom: 100% !important; -webkit-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s; }
 .back-to-top.back-down { -webkit-transition: 1.0s; -ms-transition: 1.0s; -o-transition: 1.0s; -moz-transition: 1.0s; transition: 1.0s;}
+ 
+ 
+/********************************
+             shop
+********************************/
+.product { text-align: center; position: relative;  }
+.product .product-title a { font-size: 17px; text-transform: uppercase; font-weight: 600; margin: 20px 0px 10px; display: block; }
+.product .product-title a:hover { color: #353535; }
+.product .product-price ins { text-decoration: none; color: #2046f2; font-size: 16px; font-weight: bold; }
+.product .product-rating { margin-bottom: 10px; }
+.product .product-rating i { color: #353535; }
+.product .product-image { position: relative; }
+.product .product-image .product-overlay { opacity: 0; text-align: center; left: 0; position: absolute; right: 0; top: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); z-index: 99; margin: 0 auto; transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; }
+.product:hover .product-image .product-overlay { opacity: 1; }
+.product .product-image .add-to-cart a { background: #2046f2; color: #ffffff; text-transform: uppercase; padding: 10px 20px; border-radius: 30px; }
+.product .product-image .add-to-cart a:hover { background: #353535; }
+
+/*shop-single*/
+.shop-single .title { border-top: 1px solid #e0e0e0; padding-top: 40px; }
+.shop-single .product-detail .product-detail-price { display: inline-block; }
+.shop-single .product-detail .product-detail-price ins { text-decoration: none; color: #2046f2; font-size: 16px; font-weight: bold; }
+.shop-single .product-detail .product-detail-rating i { color: #353535; }
+.shop-single .product-detail .product-detail-rating { display: inline-block; }
+.shop-single .product-detail .product-detail-quantity input { box-shadow: none; border:1px solid #e0e0e0; padding: 7px 18px 7px 14px; }
+.shop-single .product-detail .input-group { width: 140px; float: left; margin-right: 20px; }
+.shop-single .product-detail .product-detail.add-to-cart .button { display: inline-block; padding: 3px 22px; font-size: 12px; }
+.shop-single .product-detail .input-group-btn:first-child>.btn {  border-top-left-radius: 30px; border-bottom-left-radius: 30px; }
+.shop-single .product-detail .input-group-btn:last-child>.btn {  border-top-right-radius: 30px; border-bottom-right-radius: 30px; }
+
+.shop-single .product-detail .product-detail-social { border-top: 1px solid #e0e0e0; padding-top: 20px; margin-top: 20px; }
+.shop-single .product-detail .product-detail-social span { display: inline-block; padding-right: 20px; float: left; }
+.shop-single .product-detail .product-detail-social ul li { display: inline-block; }
+.shop-single .product-detail .product-detail-social ul li a { display: block; color: #aaaaaa; font-size: 14px; padding-right: 5px; }
+.shop-single .product-detail .product-detail-social ul li a:hover { color: #2046f2; }
+
+.shop-single .product-detail .product-detail-meta { border-top: 1px solid #e0e0e0; padding-top: 20px; }
+.shop-single .product-detail .product-detail-meta span { display: block; }
+.shop-single .product-detail .product-detail-meta span a { padding-left: 5px; }
+
+/*sidebar-widgets-wrap*/
+.sidebar-widgets-wrap .recent-item  { margin-bottom: 20px; }
+.sidebar-widgets-wrap .recent-item .recent-image  { display: table-cell; padding-right: 10px; width: 50px; }
+.sidebar-widgets-wrap .recent-item .recent-info { display: table-cell; vertical-align: top; }
+.sidebar-widgets-wrap .recent-item .recent-title a { color: #353535; font-weight: bold; }
+.sidebar-widgets-wrap .recent-item .recent-title a:hover { color: #2046f2;}
+.sidebar-widgets-wrap .recent-item .recent-meta li { display: inline-block; color: #353535; } 
+
+
+/*add-css-bootstrap-4*/
+.icon-rounded {height: 60px; line-height: 63px;border: 2px solid #000;text-align: center;display: inline-block;min-width: 60px;font-size: 24px;}
+.list-unstyled .media .icon i {font-size: 40px;color: #2046f2;background: transparent;}
+.center-block { display: block; margin-right: auto; margin-left: auto;}
+.under-constraction .form-group .form-control{font-size: 14px;}
+.progress-bar .progress-number {margin-top: -24px; position: relative; top: -13px;font-size: 15px;margin-right: 11px;text-align: right;}
+.progress-bar .progress-type {margin-top: -18px;position: relative;top: -13px;margin-right: 0px;font-size: 15px;text-align: right;}
+.table-bordered td, .table-bordered th{padding: 6px 8px;}
