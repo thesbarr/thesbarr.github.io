@@ -1134,7 +1134,17 @@ textarea.form-control { resize: vertical; }
 
 /***************************
          404 Page
-***************************/  
+***************************/
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  
   #notfound {
     position: relative;
     height: 100vh;
