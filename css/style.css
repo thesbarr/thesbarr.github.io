@@ -1174,6 +1174,7 @@ textarea.form-control { resize: vertical; }
   .notfound .notfound-404 h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 230px;
+    line-height: 0px;
     margin: 0px;
     font-weight: 900;
     position: absolute;
