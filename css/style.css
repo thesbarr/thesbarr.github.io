@@ -1166,7 +1166,7 @@ textarea.form-control { resize: vertical; }
   }
   
   .notfound .notfound-404 {
-    height: 240px;
+    height: 280px;
     position: relative;
     z-index: -1;
   }
