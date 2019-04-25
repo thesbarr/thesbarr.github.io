@@ -1135,7 +1135,7 @@ textarea.form-control { resize: vertical; }
 /***************************
          404 Page
 ***************************/
-{
+html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
