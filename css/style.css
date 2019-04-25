@@ -1545,13 +1545,6 @@ textarea.form-control { resize: vertical; }
 .fancy-team-tooltip ul.social li a { color: #ffffff; }
 .fancy-team-tooltip ul.social li a:hover { color: rgba(255, 255, 255, 0.65); }
 
-/*************************************
-      	    Comming Soon
-**************************************/
-.under-constraction .form-group { width: 35%; }
-.under-constraction .form-group .form-control { width: 100%; }
-.under-constraction .form-inline a { margin-left: 16px; padding: 12px 30px; }
-
 
 /********************************
          Back to top
