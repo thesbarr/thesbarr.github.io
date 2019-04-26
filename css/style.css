@@ -1576,3 +1576,65 @@ html {
 .progress-bar .progress-number {margin-top: -24px; position: relative; top: -13px;font-size: 15px;margin-right: 11px;text-align: right;}
 .progress-bar .progress-type {margin-top: -18px;position: relative;top: -13px;margin-right: 0px;font-size: 15px;text-align: right;}
 .table-bordered td, .table-bordered th{padding: 6px 8px;}
+
+
+/***************************
+		   Under Construction
+https://codetheweb.blog/2017/12/07/fullscreen-image-hero/
+***************************/
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.under {
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Text styles */
+    text-align: center;
+    color: white; /* ADD THIS LINE */
+    
+    /* Background styles */
+    background-image: url('../images/under.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.under h1 {
+    /* Text styles */
+    font-size: 5em;
+    
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.under .btn {
+    /* Positioning and sizing */
+	display: block;
+    width: 200px;
+    
+    /* Padding and margins */
+    padding: 1em;
+    margin-top: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Text styles */
+    color: white; /* CHANGE THIS LINE */
+    text-decoration: none;
+    font-size: 1.5em;
+    
+    /* Border styles */
+    border: 3px solid white; /* CHANGE THIS LINE */
+    border-radius: 20px;
+}
