@@ -735,24 +735,6 @@ ul.list-style-icon li span { color: #000000; padding-right: 15px; }
 .faq .accordion .acd-des { padding: 0 40px 40px; }
 .faq .accordion .acd-heading i { margin-right: 10px; }
 
-/***************************
-	     Our Pricing
-***************************/
-.pricing-packages .pricing { margin: 0 20px; }
-.pricing { background: #fff; box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1); padding: 40px 0; position: relative; transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -o-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; }
-.pricing .pricing-prize h2, .pricing .pricing-title h5, .pricing .pricing-title span { transition: 0.5s ease-in-out; -webkit-transition: 0.5s ease-in-out; -o-transition: 0.5s ease-in-out; -ms-transition: 0.5s ease-in-out; -moz-transition: 0.5s ease-in-out; }
-
-.pricing .pricing-title .section-title { margin-bottom: 0px; }
-.pricing .pricing-title span { font-size: 14px; display: block; text-transform: none; font-weight: normal; }
-.pricing .pricing-title h5 { font-weight: 700; }
-.pricing .pricing-prize h2 span { font-size: 14px; display: inline-block; padding-right: 5px; }
-.pricing .pricing-list ul { margin-top: 15px; }
-.pricing .pricing-list ul li { list-style-type: none; font-family: 'Poppins', sans-serif; line-height: 36px; }
-.pricing:hover { box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.1); }
-
-/* Our Pricing hover */
-.pricing.active .pricing-title h5 { color: #2046f2; }
-.pricing.active .pricing-prize h2 { color: #2046f2; }
 
 /***************************
 		about-section
