@@ -83,7 +83,7 @@ Note: This is responsive CSS of the template.
 	h3 { font-size: 24px; font-style: normal; line-height: normal; }
 	h4 { font-size: 20px; font-style: normal; line-height: normal; }
 	.page-section-ptb { padding: 50px 0; }
-	.page-section-pt { padding: 50px 0 0; }
+	.page-section-pt { padding: 0px 0 0; }
 	.page-section-pb { padding: 0 0 50px; }
 	.section-title { margin-bottom: 40px; }
 
