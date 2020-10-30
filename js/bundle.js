@@ -14,7 +14,7 @@ macplus({
     './roms/mac-plus.rom',
 
     // CONFIGURATION
-    './con/pce-config.cfg',
+    './pce-config.cfg',
 
     // HARD DRIVES
     './drives/hd1.qed',
