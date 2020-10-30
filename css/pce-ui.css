@@ -1,0 +1,35 @@
+*{
+  font-family:"helvetica neue",Helvetica,sans-serif;
+}
+.pcejs{
+  padding-right:0;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  }
+
+textarea.pcejs{
+  font-family:monospace;
+  width:80%;
+  border:none;
+  background:0 0;
+  margin-top:20px;
+  display:none;
+  }
+
+div.pcejs{
+    text-align:center;
+  }
+
+div.pcejs_border{
+    border:none;
+  }
+
+/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+.pcejs-canvas {
+  cursor: none;
+  border: 0px none;
+  padding: 0;
+}
+
+#fullscreencontrols{display:none}
