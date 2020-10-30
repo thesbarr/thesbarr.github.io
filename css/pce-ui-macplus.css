@@ -3,6 +3,7 @@ body{background:#f0f0f0;
   margin:0}
 
 .pcejs-container{background:url(macplus.svg);
+  background-size:100%;
   width:760px;
   border-radius:10px;
   padding-top:179px;
