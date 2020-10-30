@@ -18,7 +18,7 @@ macplus({
 
     // HARD DRIVES
     './drives/hd1.qed',
-    //'./drives/hd2.img',
+    './drives/hd2.img',
 
     // FLOPPY DISKS
     './disks/mac-powerpoint-1.0.image',
