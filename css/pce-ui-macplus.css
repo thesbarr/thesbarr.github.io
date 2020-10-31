@@ -5,6 +5,7 @@ body{background:#f0f0f0;
 .pcejs-container{background:url(macplus-v2.svg);
   background-size:100%;
   width:760px;
+  background-repeat: no-repeat;
   border-radius:10px;
   padding-top:179px;
   height:827px;
