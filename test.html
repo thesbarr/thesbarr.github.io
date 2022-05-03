@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/css/pce-ui.css">
+    <link rel="stylesheet" type="text/css" href="/css/pce-ui-macplus.css">
+  </head>
+  <body>
+    <script>if('ontouchstart' in window && window.matchMedia && window.matchMedia('(max-device-width : 1024px)').matches) { window.location.replace('./mobile/');}</script>
+    <div class="pcejs pcejs-container">
+      <div class="pcejs pcejs-loading-status">Downloading...</div>
+      <div class="pcejs">
+        <canvas class="pcejs pcejs-canvas" oncontextmenu="event.preventDefault()"></canvas>
+      </div>
+    </div>
+    <script type="text/javascript" src="/js/bundle.js"></script>
+    <script type="text/javascript" src="/js/rAF.js"></script>
+
+  </body>
+</html>
