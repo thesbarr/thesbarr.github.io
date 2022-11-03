@@ -198,6 +198,7 @@ select { width: 100%; background: #f6f7f8; border: 0px; padding: 15px 18px 15px 
 .gray-bg { background: #f6f7f8; }
 .blue-bg { background: #2046f2; }
 .black-bg { background: #353535; }
+.gold-bg { background: #f8b800;}
 .no-padding { padding: 0px !important; }
 .no-gutter > [class*='col-'] { padding-right: 0px; padding-left: 0px; }
 /*.row-eq-height { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
