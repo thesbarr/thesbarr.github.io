@@ -1059,7 +1059,7 @@ div#main { z-index: 1; position: relative; }
 ***************************/
 .intro-title .intro-content { position: relative; }
 .intro-title .intro-content .intro-name { padding: 100px 500px 100px 0px; position: relative; z-index: 9;}
-.intro-title .intro-content .intro-img { position: absolute; bottom: 0px; height: auto; width: auto; right: 80px; }
+.intro-title .intro-content .intro-img { position: absolute; bottom: 0px; width: 400px; right: 0px; }
 .intro-title.dark .intro-content .intro-name { padding: 100px 0px; }
 
 .intro-title .breadcrumb { background: transparent; border-radius: 0; margin-bottom: 0; padding: 0; }
