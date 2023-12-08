@@ -28,7 +28,7 @@
       y: canvas.height - 50,
       width: 30,
       height: 30,
-      color: 'white',
+      color: 'red', // Change ship color to red
       speed: 5
     };
 
@@ -148,9 +148,11 @@
       }
     }
 
-    // Draw the spaceship, bullets, enemies, and power-ups on the canvas
+    // Draw the background, spaceship, bullets, enemies, and power-ups on the canvas
     function draw() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // Draw black background
+      ctx.fillStyle = 'black';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Draw spaceship
       ctx.fillStyle = spaceship.color;
