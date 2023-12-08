@@ -16,7 +16,7 @@
   </style>
 </head>
 <body>
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
+  <canvas id="gameCanvas"></canvas>
 
   <script>
     const canvas = document.getElementById('gameCanvas');
@@ -24,7 +24,7 @@
 
     // Define spaceship properties
     const spaceship = {
-      x: canvas.width / 2,
+      x: canvas.width / 2 - 15,
       y: canvas.height - 50,
       width: 30,
       height: 30,
