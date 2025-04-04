@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,25 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Flexbox layout rules -->
+  <style>
+    /* Make the entire page fill the browser window */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    /* Set body as a flex container */
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+    /* Let main expand to fill leftover vertical space */
+    main {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,8 +41,9 @@
           <img src="images/logo-dark.png" alt="Stephen Barr logo" class="logo-dark d-inline-block" style="height: 40px;">
           <img src="images/logo-light.png" alt="Stephen Barr logo" class="logo-light d-none" style="height: 40px;">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -39,14 +59,17 @@
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main class="py-5" style="background: linear-gradient(135deg, #a19d9d 0%, #e9ecef 100%);">
+  <main class="py-5"
+        style="background: linear-gradient(135deg, #f9f9f9 0%, #e9ecef 100%);">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <h1 class="mb-4 text-center">Contact Me</h1>
           <p class="text-center text-muted mb-4">
-            Let’s connect – fill out the form below or connect on LinkedIn.
+            Let’s connect — fill out the form below or connect on LinkedIn.
           </p>
+
+          <!-- Form -->
           <form action="https://formspree.io/stephen@stephenabarr.com" method="POST">
             <div class="form-group">
               <label for="name">Name</label>
@@ -91,9 +114,8 @@
                 required
               ></textarea>
             </div>
-            <!-- Hidden field for redirect -->
             <input type="hidden" name="_next" value="/thank-you.html">
-            <!-- Submit Button -->
+
             <button type="submit" class="btn btn-primary btn-block mt-3">
               Send Message
             </button>
@@ -111,9 +133,9 @@
             </a>
           </div>
 
-        </div>
-      </div>
-    </div>
+        </div> <!-- end col-md-8 -->
+      </div> <!-- end row -->
+    </div> <!-- end container -->
   </main>
 
   <!-- ===== FOOTER ===== -->
