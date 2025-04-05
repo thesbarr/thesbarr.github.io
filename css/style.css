@@ -167,6 +167,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ====================================================
+   7. Beyond
+==================================================== */
+.beyond-section .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.beyond-section .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.beyond-section .card-text {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ====================================================
    7. Resume Section
 ==================================================== */
 .resume {
