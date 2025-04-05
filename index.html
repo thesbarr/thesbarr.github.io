@@ -25,7 +25,6 @@
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Custom Nav & Layout Styles -->
   <style>
     html, body {
       height: 100%;
@@ -56,6 +55,18 @@
 
     .navbar-nav .nav-link.active {
       color: #f8b800 !important;
+    }
+
+    .hero-image {
+      background: url("images/SBarr-Headshot-Web.jpg") center center/cover no-repeat;
+      height: 60vh;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .hero-image {
+        height: 40vh;
+      }
     }
   </style>
 </head>
@@ -91,17 +102,12 @@
     </div>
   </nav>
 
-  <!-- ✅ Hero Section -->
+  <!-- ✅ Hero Image Section -->
   <main>
-    <section class="hero py-5">
-      <div class="container">
-        <!-- Optional: Add hero image or headline -->
-        <h1 class="text-center">Welcome to My Professional Portfolio</h1>
-      </div>
-    </section>
+    <div class="hero-image"></div>
   </main>
 
-  <!-- ✅ Footer (auto-positioned to bottom if content is short) -->
+  <!-- ✅ Footer -->
   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
@@ -126,6 +132,5 @@
     gtag('js', new Date());
     gtag('config', 'G-V745RLVFR1');
   </script>
-
 </body>
 </html>
