@@ -97,6 +97,33 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--vcu-gold);
 }
 
+.nav-link-bold {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav-hover-gold:hover,
+.nav-hover-gold:focus {
+  color: #f8b800 !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #f8b800 !important;
+}
+
+.hero-image {
+  background: url("../images/SBarr-Headshot-Web.jpg") center center/cover no-repeat;
+  height: 87vh;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 40vh;
+  }
+}
+
 /* ====================================================
    5. Hero Banner
 ==================================================== */
