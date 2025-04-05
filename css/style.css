@@ -76,20 +76,18 @@ h1, h2, h3, h4, h5, h6 {
    4. Navbar
 ==================================================== */
 .navbar {
-  background-color: var(--vcu-black);
-  padding: 1rem 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-.navbar-brand {
-  font-weight: 700;
-  color: var(--vcu-gold);
+.navbar .navbar-brand img {
+  height: 36px;
 }
 
 .navbar-nav .nav-link {
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-right: 1rem;
-  color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 16px; /* Adjust to your original preference */
 }
 
 .navbar-nav .nav-link:hover,
