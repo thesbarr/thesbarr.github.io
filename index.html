@@ -25,48 +25,37 @@
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 
+ <!-- ✅ Hero Image Section (Updated) -->
+<main class="flex-shrink-0">
+    <div class="hero-image"></div>
+  </main>
+  
   <style>
+    .hero-image {
+      background: url("images/SBarr-Headshot-Web.jpg") center center/cover no-repeat;
+      height: 40vh;
+      width: 100%;
+    }
+  
+    @media (max-width: 768px) {
+      .hero-image {
+        height: 30vh;
+      }
+    }
+  
     html, body {
       height: 100%;
       margin: 0;
-      padding: 0;
-    }
-
-    body {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
     }
-
+  
     main {
-      flex: 1;
+      flex: 0 0 auto;
     }
-
-    .nav-link-bold {
-      font-size: 18px;
-      font-weight: 700;
-      text-transform: uppercase;
-    }
-
-    .nav-hover-gold:hover,
-    .nav-hover-gold:focus {
-      color: #f8b800 !important;
-    }
-
-    .navbar-nav .nav-link.active {
-      color: #f8b800 !important;
-    }
-
-    .hero-image {
-      background: url("images/SBarr-Headshot-Web.jpg") center center/cover no-repeat;
-      height: 60vh;
-      position: relative;
-    }
-
-    @media (max-width: 768px) {
-      .hero-image {
-        height: 40vh;
-      }
+  
+    footer {
+      margin-top: 0;
     }
   </style>
 </head>
