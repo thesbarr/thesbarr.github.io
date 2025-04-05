@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Beyond the Desk - Stephen Barr">
-  <meta name="author" content="stephenabarr.com">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Beyond the Desk - Stephen Barr" />
+  <meta name="author" content="stephenabarr.com" />
   <title>Beyond the Desk</title>
 
-  <!-- ===== Bootstrap 5 CSS (CDN), no integrity to avoid mismatch error ===== -->
+  <!-- Bootstrap 5 (CDN, no SRI) -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
   />
 
   <!-- Font Awesome, local CSS, etc. -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <style>
-    /* Hover animation + bigger shadow and margin for each card */
     .hover-animate {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -26,71 +25,41 @@
       transform: translateY(-5px);
       box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
     }
-
-    /* Make card titles bold, keep them black */
     .card .card-title {
       font-weight: bold;
       color: #000;
     }
-
-    /* Apply extra margin to the card for spacing */
     .card {
       margin: 1rem;
     }
-
-    /* Dark overlay for the counter section to ensure text is readable */
     .counter-overlay {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
                   url("images/bg/brick.jpg") center center/cover no-repeat;
     }
   </style>
 
-  <!-- jQuery if you need it for counters or other scripts -->
   <script src="js/jquery.min.js"></script>
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header class="bg-dark py-3">
-    <div class="container d-flex justify-content-between align-items-center">
-      <!-- Logo/Brand -->
-      <a href="index.html">
-        <img
-          src="images/logo-light.png"
-          alt="Stephen Barr Logo"
-          style="height: 40px;"
-        >
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo-light.png" alt="Stephen Barr Logo" style="height: 40px;">
       </a>
-
-      <!-- Toggler for mobile -->
-      <button
-        class="navbar-toggler d-lg-none btn btn-outline-light"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNav"
-        aria-controls="mainNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <!-- Navbar Menu -->
-      <nav class="collapse navbar-collapse flex-grow-0" id="mainNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a href="index.html" class="nav-link text-white mx-2">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="beyond-the-desk.html" class="nav-link text-white mx-2">Beyond the Desk</a>
-          </li>
-          <li class="nav-item">
-            <a href="contact.html" class="nav-link text-white mx-2">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="beyond-the-desk.html">Beyond the Desk</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
 
   <!-- ===== A Little Something Extra ===== -->
   <section class="py-5 bg-light">
@@ -324,36 +293,35 @@
   </section>
 
   <!-- ===== SELECTED PRESENTATIONS ===== -->
-  <section 
-  class="py-5 text-dark"
-  style="background: url('images/projector.png') center center/cover no-repeat;"
->
-  <div class="container">
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="font-weight-bold mb-5 text-center">Selected Presentations</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
 
-    <!-- Main heading -->
-    <h2 class="font-weight-bold mb-5 text-center">Selected Presentations</h2>
-
-          <!-- Category Titles Are Bold -->
+          <!-- Category #1 -->
           <div class="mb-4">
-            <h4 class="font-weight-bold">Recent Events (2023–2024)</h4>
+            <h4 class="fw-bold">Recent Events (2023–2024)</h4>
             <ul>
               <li>SACUBO Fall Workshop 2024 – Retaining Your Finance Workforce</li>
               <li>NACAS C3X 2024 – Enhancing Student Engagement in Food Services with Technology and Fun</li>
-              <li>NACAS C3X 2023 – Empowering Auxiliary Officers to be More Engaged...</li>
+              <li>NACAS C3X 2023 – Empowering Auxiliary Officers to be More Engaged in Campus Edge Projects (Panel Discussion)</li>
               <li>NACAS East/Central CX 2023 – Makin' Groceries: A look into VCU's new grocery store!</li>
             </ul>
           </div>
 
+          <!-- Category #2 -->
           <div class="mb-4">
-            <h4 class="font-weight-bold">Virtual & Leadership Forums</h4>
+            <h4 class="fw-bold">Virtual & Leadership Forums</h4>
             <ul>
-              <li>NACAS Virtual Leadership Forum 2020 – Leveraging Auxiliaries...</li>
-              <li>NACAS Senior Leadership Institute 2018 – General Session: Creative Presentations...</li>
+              <li>NACAS Virtual Leadership Forum 2020 – Leveraging Auxiliaries to Mitigate Campus Enrollment Challenges</li>
+              <li>NACAS Senior Leadership Institute 2018 – General Session: Creative Presentations That Captivate</li>
             </ul>
           </div>
 
+          <!-- Category #3 -->
           <div class="mb-4">
-            <h4 class="font-weight-bold">Creative & Campus Engagement</h4>
+            <h4 class="fw-bold">Creative & Campus Engagement</h4>
             <ul>
               <li>NACAS 2019 / NACAS East CX 2019 – How VCU Captured Bigfoot</li>
               <li>VCU School of Medicine 2019 – Creative Presentations That Captivate, Inform, and Inspire</li>
@@ -363,8 +331,9 @@
             </ul>
           </div>
 
+          <!-- Category #4 -->
           <div class="mb-4">
-            <h4 class="font-weight-bold">Earlier Works</h4>
+            <h4 class="fw-bold">Earlier Works</h4>
             <ul>
               <li>NACAS 2016 – Biometrics Offer Better Student Living</li>
               <li>NACAS 2015 – RamTech @ VCU</li>
