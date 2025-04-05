@@ -153,6 +153,35 @@ footer {
               url("../images/bg/brick.jpg") center center/cover no-repeat;
 }
 
+/* ========== CONTACT PAGE STYLES ========== */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  background: url("../images/Contact_Background.jpg") center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.logo-light {
+  display: none;
+}
 
 /***************************
 		 General
