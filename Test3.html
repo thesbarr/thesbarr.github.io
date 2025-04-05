@@ -7,8 +7,15 @@
   <meta name="author" content="stephenabarr.com">
   <title>Beyond the Desk</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- ===== BOOTSTRAP 5 CSS (CDN) ===== -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    integrity="sha384-ENjdO4Dr2bkBIFxQp+A7K9DE3ts4rsAiAn1rHOmKhkwRZMaEYVPLGU3R0OzROV2k"
+    crossorigin="anonymous"
+  />
+
+  <!-- Font Awesome, local CSS, etc. -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 
@@ -23,29 +30,55 @@
     }
   </style>
 
-  <!-- jQuery must load FIRST for scripts that depend on it -->
+  <!-- jQuery (ONLY if you need it for counters or other plugins) -->
   <script src="js/jquery.min.js"></script>
-  <!-- This is your local jQuery CountTo plugin -->
+  <!-- Example if using local jQuery.countTo or another plugin:
   <script src="js/counter/jquery.countTo.js"></script>
+  -->
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- ===== HEADER (Bootstrap 5 Navbar) ===== -->
   <header class="bg-dark py-3">
     <div class="container d-flex justify-content-between align-items-center">
+      <!-- Logo / Brand -->
       <a href="index.html">
-        <img src="images/logo-light.png" alt="Stephen Barr Logo" style="height: 40px;">
+        <img
+          src="images/logo-light.png"
+          alt="Stephen Barr Logo"
+          style="height: 40px;"
+        >
       </a>
-      <nav>
-        <a href="index.html" class="text-white mx-2">Home</a>
-        <a href="beyond-the-desk.html" class="text-white mx-2">Beyond the Desk</a>
-        <a href="contact.html" class="text-white mx-2">Contact</a>
+      <!-- Navbar Toggler for mobile -->
+      <button
+        class="navbar-toggler d-lg-none btn btn-outline-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse flex-grow-0" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link text-white mx-2">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="beyond-the-desk.html" class="nav-link text-white mx-2">Beyond the Desk</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link text-white mx-2">Contact</a>
+          </li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <!-- ===== A Little Something Extra ===== -->
-  <section class="page-section-ptb bg-light">
+  <!-- ===== A LITTLE SOMETHING EXTRA ===== -->
+  <section class="py-5 bg-light">
     <div class="container">
       <h2 class="font-weight-bold mb-5 text-center">A Little Something Extra</h2>
       <div class="row text-center">
@@ -53,23 +86,35 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="https://nacas.org/about/regions/nacas-east/" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-board.jpg" class="card-img-top" alt="NACAS East Board">
+              <img
+                src="images/case-studies/beyond-board.jpg"
+                class="card-img-top"
+                alt="NACAS East Board"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">NACAS East Board</h5>
-                <p class="card-text text-dark">Elected to the regional board for auxiliary services leadership.</p>
+                <p class="card-text text-dark">
+                  Elected to the regional board for auxiliary services leadership.
+                </p>
               </div>
             </div>
           </a>
         </div>
 
-        <!-- Hurricane Katrina Response -->
+        <!-- Hurricane Katrina Hospital -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/beyond-katrina-doc.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-katrina.jpg" class="card-img-top" alt="Katrina Hospital">
+              <img
+                src="images/case-studies/beyond-katrina.jpg"
+                class="card-img-top"
+                alt="Katrina Hospital"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">Hurricane Katrina Response</h5>
-                <p class="card-text text-dark">Led logistics for a field hospital at LSU during Hurricane Katrina.</p>
+                <p class="card-text text-dark">
+                  Led logistics for a field hospital at LSU during Hurricane Katrina.
+                </p>
               </div>
             </div>
           </a>
@@ -79,10 +124,16 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/video/VCU Dine Food Truck Fest 2019.mp4" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-foodtruck.png" class="card-img-top" alt="Food Truck Festival">
+              <img
+                src="images/case-studies/beyond-foodtruck.png"
+                class="card-img-top"
+                alt="Food Truck Festival"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">VCU Food Truck Festival</h5>
-                <p class="card-text text-dark">Engaging students through food and fun on campus.</p>
+                <p class="card-text text-dark">
+                  Engaging students through food and fun on campus.
+                </p>
               </div>
             </div>
           </a>
@@ -92,10 +143,16 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/BarrLetterOfAppreciation.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-letter.png" class="card-img-top" alt="Letter of Appreciation">
+              <img
+                src="images/case-studies/beyond-letter.png"
+                class="card-img-top"
+                alt="Letter of Appreciation"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">Letter of Appreciation</h5>
-                <p class="card-text text-dark">Recognition for impactful contributions and service.</p>
+                <p class="card-text text-dark">
+                  Recognition for impactful contributions and service.
+                </p>
               </div>
             </div>
           </a>
@@ -105,10 +162,16 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="https://nacas.org/member-benefits/casp/roster/" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-casp.jpg" class="card-img-top" alt="CASP">
+              <img
+                src="images/case-studies/beyond-casp.jpg"
+                class="card-img-top"
+                alt="CASP Accreditation"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">CASP Accreditation</h5>
-                <p class="card-text text-dark">Certified Auxiliary Services Professional — nationally recognized credential.</p>
+                <p class="card-text text-dark">
+                  Certified Auxiliary Services Professional — nationally recognized credential.
+                </p>
               </div>
             </div>
           </a>
@@ -118,10 +181,16 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="https://youtu.be/WX6vioW7SZc" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-super.jpg" class="card-img-top" alt="Superbowl">
+              <img
+                src="images/case-studies/beyond-super.jpg"
+                class="card-img-top"
+                alt="Super Bowl XXXVIII"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">Super Bowl XXXVIII</h5>
-                <p class="card-text text-dark">Served as crew chief for game operations and logistics.</p>
+                <p class="card-text text-dark">
+                  Served as crew chief for game operations and logistics.
+                </p>
               </div>
             </div>
           </a>
@@ -131,10 +200,16 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/beyond-teamplayer.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-awards.png" class="card-img-top" alt="Team Player">
+              <img
+                src="images/case-studies/beyond-awards.png"
+                class="card-img-top"
+                alt="Team Player"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">Team Player Recognition</h5>
-                <p class="card-text text-dark">Acknowledged as a collaborative leader in campus services.</p>
+                <p class="card-text text-dark">
+                  Acknowledged as a collaborative leader in campus services.
+                </p>
               </div>
             </div>
           </a>
@@ -144,10 +219,16 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/video/Grocery.mp4" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/beyond-grocery.jpg" class="card-img-top" alt="Grocery Store">
+              <img
+                src="images/case-studies/beyond-grocery.jpg"
+                class="card-img-top"
+                alt="Grocery Store"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">VCU Grocery Store</h5>
-                <p class="card-text text-dark">Helped launch VCU’s first on-campus grocery store initiative.</p>
+                <p class="card-text text-dark">
+                  Helped launch VCU’s first on-campus grocery store initiative.
+                </p>
               </div>
             </div>
           </a>
@@ -157,12 +238,19 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a
             href="https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger"
-            class="text-decoration-none">
+            class="text-decoration-none"
+          >
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/LRP - BSV.png" class="card-img-top" alt="Ram Pantry">
+              <img
+                src="images/case-studies/LRP - BSV.png"
+                class="card-img-top"
+                alt="Little Ram Pantry"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">Little Ram Pantry</h5>
-                <p class="card-text text-dark">Partnered to address food insecurity for students at VCU.</p>
+                <p class="card-text text-dark">
+                  Partnered to address food insecurity for students at VCU.
+                </p>
               </div>
             </div>
           </a>
@@ -172,75 +260,74 @@
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/PRSA - Warner Letter.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
-              <img src="images/case-studies/PRSA - Warner Letter.jpg" class="card-img-top" alt="Senator Warner Letter">
+              <img
+                src="images/case-studies/PRSA - Warner Letter.jpg"
+                class="card-img-top"
+                alt="Senator Warner Letter"
+              >
               <div class="card-body">
                 <h5 class="card-title font-weight-bold text-dark">Senator Warner Letter</h5>
-                <p class="card-text text-dark">Commendation from U.S. Senator Mark Warner for service efforts.</p>
+                <p class="card-text text-dark">
+                  Commendation from U.S. Senator Mark Warner for service efforts.
+                </p>
               </div>
             </div>
           </a>
         </div>
 
-      </div><!-- end row -->
-    </div><!-- end container -->
+      </div><!-- row -->
+    </div><!-- container -->
   </section>
 
   <!-- ===== COUNTER SECTION ===== -->
-  <section class="counter page-section-ptb bg fixed bg-overlay-black-80"
-           style="background:url('images/bg/brick.jpg');">
+  <section
+    class="py-5 text-white text-center"
+    style="background: url('images/bg/brick.jpg') center center/cover no-repeat;"
+  >
     <div class="container">
       <div class="row">
-        <!-- 1) Professional Presentations -->
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="counter-block">
-            <span class="ti-stats-up"></span>
-            <!-- data-to defines the final count, data-speed defines animation duration -->
-            <b class="timer mt-3 counter-pres" data-to="24" data-speed="3000">0</b>
-            <h6 class="text-white mt-3">Professional Presentations Given</h6>
-          </div>
+        <!-- #1 Presentations -->
+        <div class="col-md-3 mb-4">
+          <h1 class="display-4" data-countto="24">0</h1>
+          <p>Professional Presentations Given</p>
         </div>
-        <!-- 2) Countries Represented -->
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="counter-block">
-            <span class="ti-world"></span>
-            <b class="timer mt-3 counter-countries" data-to="141" data-speed="1500">0</b>
-            <h6 class="text-white mt-3">COUNTRIES REPRESENTED at VCU</h6>
-          </div>
+        <!-- #2 Countries -->
+        <div class="col-md-3 mb-4">
+          <h1 class="display-4" data-countto="141">0</h1>
+          <p>Countries Represented at VCU</p>
         </div>
-        <!-- 3) VCU Enrollment -->
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="counter-block">
-            <span class="ti-panel"></span>
-            <b class="timer mt-3 counter-enroll" data-to="28594" data-speed="2000">0</b>
-            <h6 class="text-white mt-3">VCU ENROLLMENT</h6>
-          </div>
+        <!-- #3 Enrollment -->
+        <div class="col-md-3 mb-4">
+          <h1 class="display-4" data-countto="28594">0</h1>
+          <p>VCU Enrollment</p>
         </div>
-        <!-- 4) Days on the Job (dynamic) -->
-        <div class="col-md-3 col-sm-6 text-center">
-          <div class="counter-block">
-            <span class="ti-bag"></span>
-            <!-- We'll set data-to in the script below -->
-            <b id="vcuDays" class="timer mt-3 counter-days" data-speed="2500" data-to="0">0</b>
-            <h6 class="text-white mt-3">DAYS ON THE JOB AT VCU (AND COUNTING)</h6>
-          </div>
+        <!-- #4 Days on the job -->
+        <div class="col-md-3 mb-4">
+          <h1 class="display-4" id="vcuDays" data-countto="0">0</h1>
+          <p>Days on the Job at VCU (And Counting)</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ===== SELECTED PRESENTATIONS ===== -->
-  <section class="page-section-ptb bg-white">
+  <section class="py-5 bg-white">
     <div class="container">
       <h2 class="font-weight-bold mb-5 text-center">Selected Presentations</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
+
+          <!-- Stephen's portrait -->
           <div class="text-center mb-4">
-            <img src="images/stephen.jpg"
-                 alt="Stephen Barr"
-                 class="img-fluid rounded-circle shadow"
-                 style="max-width: 180px;">
+            <img
+              src="images/stephen.jpg"
+              alt="Stephen Barr"
+              class="img-fluid rounded-circle shadow"
+              style="max-width: 180px;"
+            >
           </div>
-          <!-- Example Recent Events -->
+
+          <!-- Example: Recent Events -->
           <div class="mb-4">
             <h5 class="font-weight-bold">Recent Events (2023–2024)</h5>
             <ul>
@@ -250,14 +337,17 @@
               <li>NACAS East/Central CX 2023 – Makin' Groceries: A look into VCU's new grocery store!</li>
             </ul>
           </div>
-          <!-- Virtual & Leadership, etc. -->
+
+          <!-- Virtual & Leadership Forums -->
           <div class="mb-4">
             <h5 class="font-weight-bold">Virtual & Leadership Forums</h5>
             <ul>
-              <li>NACAS Virtual Leadership Forum 2020 – Leveraging Auxiliaries...</li>
+              <li>NACAS Virtual Leadership Forum 2020 – Leveraging the Value of Auxiliaries...</li>
               <li>NACAS Senior Leadership Institute 2018 – General Session: Creative Presentations...</li>
             </ul>
           </div>
+
+          <!-- Creative & Campus Engagement -->
           <div class="mb-4">
             <h5 class="font-weight-bold">Creative & Campus Engagement</h5>
             <ul>
@@ -268,6 +358,8 @@
               <li>VCU School of Medicine 2017 – Now Presenting: Creative Presentations</li>
             </ul>
           </div>
+
+          <!-- Earlier Works -->
           <div class="mb-4">
             <h5 class="font-weight-bold">Earlier Works</h5>
             <ul>
@@ -278,9 +370,10 @@
               <li>NACCU 2012 – Wired to Wireless</li>
             </ul>
           </div>
-        </div>
-      </div>
-    </div>
+
+        </div> <!-- col-lg-8 -->
+      </div> <!-- row -->
+    </div> <!-- container -->
   </section>
 
   <!-- ===== FOOTER ===== -->
@@ -295,51 +388,47 @@
     </div>
   </footer>
 
-  <!-- Popper & Bootstrap -->
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <!-- ===== BOOTSTRAP 5 JS BUNDLE (INCLUDES POPPER) ===== -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQp+A7K9DE3ts4rsAiAn1rHOmKhkwRZMaEYVPLGU3R0OzROV2k"
+    crossorigin="anonymous"
+  ></script>
 
-  <!-- Final script that calculates days & triggers the count animations -->
+  <!-- If you use jQuery-based counters or other scripts, put them here -->
   <script>
+    // Example: dynamic days
+    // This is a basic approach if you're not using a plugin
     document.addEventListener('DOMContentLoaded', function() {
-      // 1) Days since January 5, 2015
+      // 1) Days since 2015-01-05
       const startDate = new Date('2015-01-05');
       const diffDays = Math.floor((Date.now() - startDate) / (1000 * 60 * 60 * 24));
 
-      // 2) Assign that dynamic number to data-to for vcuDays
+      // 2) Insert into the #vcuDays element's data-countto
       const daysElem = document.getElementById('vcuDays');
-      daysElem.setAttribute('data-to', diffDays);
+      daysElem.setAttribute('data-countto', diffDays);
 
-      // 3) Use jQuery.countTo on each separate counter
-      //    Each element has data-to and data-speed in the HTML
-      //    class examples: .counter-pres, .counter-countries, .counter-enroll, .counter-days
-
-      $('.counter-pres').countTo({
-        from: 0,
-        to: $('.counter-pres').data('to'),
-        speed: $('.counter-pres').data('speed') || 3000
-      });
-
-      $('.counter-countries').countTo({
-        from: 0,
-        to: $('.counter-countries').data('to'),
-        speed: $('.counter-countries').data('speed') || 2000
-      });
-
-      $('.counter-enroll').countTo({
-        from: 0,
-        to: $('.counter-enroll').data('to'),
-        speed: $('.counter-enroll').data('speed') || 2500
-      });
-
-      // 4) Days on the Job
-      $('.counter-days').countTo({
-        from: 0,
-        to: $('.counter-days').data('to'),
-        speed: $('.counter-days').data('speed') || 2500
-      });
+      // 3) Animate all .display-4 that have data-countto
+      //    (Simplistic approach)
+      if (typeof $ !== 'undefined') { // jQuery check
+        $('[data-countto]').each(function() {
+          const $this = $(this);
+          const final = parseInt($this.attr('data-countto'), 10) || 0;
+          let current = 0;
+          const step = Math.ceil(final / 100);
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= final) {
+              current = final;
+              clearInterval(timer);
+            }
+            $this.text(current);
+          }, 20);
+        });
+      } else {
+        // If not using jQuery, do it in plain JS
+      }
     });
   </script>
-
 </body>
 </html>
