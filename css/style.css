@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 ==================================================== */
 .experience-section {
   padding: 4rem 2rem;
-  background-color: hsl(46, 100%, 94%); /* Light gray to contrast white cards */
+  background-color: hsl(43, 9%, 85%); /* Light gray to contrast white cards */
 }
 
 .experience-card {
