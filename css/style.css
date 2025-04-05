@@ -76,6 +76,57 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 ======================================
 [ End table content ]
 ======================================*/
+/* ========== HOME PAGE STYLES ========== */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image {
+  background: url("../images/SBarr-Headshot-Web.jpg") center center/cover no-repeat;
+  height: 87vh;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    height: 40vh;
+  }
+}
+
+/* Nav styling */
+.nav-link-bold {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.nav-hover-gold:hover,
+.nav-hover-gold:focus {
+  color: #f8b800 !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #f8b800 !important;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+}
 
 /***************************
 		 General
