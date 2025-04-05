@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
+
   <style>
+    /* Hover animation for your cards */
     .hover-animate {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -21,7 +23,7 @@
     }
   </style>
 
-  <!-- jQuery must be loaded before other scripts that use $ -->
+  <!-- jQuery must load first for the counters to work properly -->
   <script src="js/jquery.min.js"></script>
 </head>
 <body>
@@ -41,11 +43,13 @@
     </div>
   </header>
 
-  <!-- ===== A Little Something Extra ===== -->
+  <!-- ===== A LITTLE SOMETHING EXTRA ===== -->
   <section class="page-section-ptb bg-light">
     <div class="container">
-      <h2 class="text-primary font-weight-bold mb-5 text-center">A Little Something Extra</h2>
+      <!-- Black heading instead of text-primary -->
+      <h2 class="font-weight-bold mb-5 text-center">A Little Something Extra</h2>
       <div class="row text-center">
+        <!-- NACAS East Board -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="https://nacas.org/about/regions/nacas-east/" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -57,6 +61,8 @@
             </div>
           </a>
         </div>
+
+        <!-- Hurricane Katrina Response -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/beyond-katrina-doc.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -68,6 +74,8 @@
             </div>
           </a>
         </div>
+
+        <!-- VCU Food Truck Festival -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/video/VCU Dine Food Truck Fest 2019.mp4" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -79,6 +87,8 @@
             </div>
           </a>
         </div>
+
+        <!-- Letter of Appreciation -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/BarrLetterOfAppreciation.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -90,6 +100,8 @@
             </div>
           </a>
         </div>
+
+        <!-- CASP Accreditation -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="https://nacas.org/member-benefits/casp/roster/" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -101,6 +113,8 @@
             </div>
           </a>
         </div>
+
+        <!-- Super Bowl XXXVIII -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="https://youtu.be/WX6vioW7SZc" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -112,6 +126,8 @@
             </div>
           </a>
         </div>
+
+        <!-- Team Player Recognition -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/beyond-teamplayer.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -123,6 +139,8 @@
             </div>
           </a>
         </div>
+
+        <!-- VCU Grocery Store -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/video/Grocery.mp4" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -134,8 +152,11 @@
             </div>
           </a>
         </div>
+
+        <!-- Little Ram Pantry -->
         <div class="col-md-6 col-lg-4 mb-4">
-          <a href="https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger" class="text-decoration-none">
+          <a href="https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger"
+             class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
               <img src="images/case-studies/LRP - BSV.png" class="card-img-top" alt="Ram Pantry">
               <div class="card-body text-center">
@@ -145,6 +166,8 @@
             </div>
           </a>
         </div>
+
+        <!-- Senator Warner Letter -->
         <div class="col-md-6 col-lg-4 mb-4">
           <a href="images/doc/PRSA - Warner Letter.pdf" class="text-decoration-none">
             <div class="card h-100 shadow-sm hover-animate">
@@ -156,75 +179,87 @@
             </div>
           </a>
         </div>
+
+      </div><!-- end row -->
+    </div><!-- end container -->
+  </section>
+
+  <!-- ===== COUNTER SECTION ===== -->
+  <section class="counter page-section-ptb bg fixed bg-overlay-black-80"
+           style="background:url('images/bg/brick.jpg');">
+    <div class="container">
+      <div class="row">
+        <!-- 1) Professional Presentations -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="counter-block">
+            <span class="ti-stats-up"></span>
+            <b class="timer mt-3 counter-1" data-to="24" data-speed="3000">0</b>
+            <h6 class="text-white mt-3">Professional Presentations Given</h6>
+          </div>
+        </div>
+        <!-- 2) Countries Represented -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="counter-block">
+            <span class="ti-world"></span>
+            <b class="timer mt-3 counter-2" data-to="141" data-speed="1500">0</b>
+            <h6 class="text-white mt-3">COUNTRIES REPRESENTED at VCU</h6>
+          </div>
+        </div>
+        <!-- 3) VCU Enrollment -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="counter-block">
+            <span class="ti-panel"></span>
+            <b class="timer mt-3 counter-3" data-to="28594" data-speed="2000">0</b>
+            <h6 class="text-white mt-3">VCU ENROLLMENT</h6>
+          </div>
+        </div>
+        <!-- 4) Days on the Job -->
+        <div class="col-md-3 col-sm-6 text-center">
+          <div class="counter-block">
+            <span class="ti-bag"></span>
+            <!-- We'll set data-to dynamically via JS -->
+            <b id="vcuDays" class="timer mt-3 counter-days" data-speed="2500" data-to="0">0</b>
+            <h6 class="text-white mt-3">DAYS ON THE JOB AT VCU (AND COUNTING)</h6>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!--=================================
-  counter-->
-  <section class="counter page-section-ptb bg fixed bg-overlay-black-80" style="background:url(images/bg/brick.jpg);">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-3 col-sm-6 text-center">
-                  <div class="counter-block">
-                      <span class="ti-stats-up"></span>
-                      <b class="timer mt-3" data-to="24" data-speed="10000">24</b>
-                      <h6 class="text-white mt-3">Professional Presentations Given</h6>
-                  </div>
-              </div>
-              <div class="col-md-3 col-sm-6 text-center">
-                  <div class="counter-block">
-                      <span class="ti-world"></span>
-                      <b class="timer mt-3" data-to="141" data-speed="10000">141</b>
-                      <h6 class="text-white mt-3">COUNTRIES REPRESENTED at VCU</h6>
-                  </div>
-              </div>
-              <div class="col-md-3 col-sm-6 text-center">
-                  <div class="counter-block">
-                      <span class="ti-panel"></span>
-                      <b class="timer mt-3" data-to="28594" data-speed="10000">28594</b>
-                      <h6 class="text-white mt-3">VCU ENROLLMENT</h6>
-                  </div>
-              </div>
-              <div class="col-md-3 col-sm-6 text-center">
-                  <div class="counter-block">
-                      <span class="ti-bag"></span>
-                      <b class="timer mt-3" data-to="3662" data-speed="10000">3662</b>
-                      <h6 class="text-white mt-3">DAYS ON THE JOB AT VCU (AND COUNTING)</h6>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <!--=================================
-counter-->
-
-  <!-- ===== PRESENTATIONS ===== -->
+  <!-- ===== SELECTED PRESENTATIONS ===== -->
   <section class="page-section-ptb bg-white">
     <div class="container">
-      <h2 class="text-primary font-weight-bold mb-5 text-center">Selected Presentations</h2>
+      <!-- Heading is black now -->
+      <h2 class="font-weight-bold mb-5 text-center">Selected Presentations</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
+          <!-- Stephen's Portrait -->
           <div class="text-center mb-4">
-            <img src="images/stephen.jpg" alt="Stephen Barr" class="img-fluid rounded-circle shadow" style="max-width: 180px;">
+            <img src="images/stephen.jpg"
+                 alt="Stephen Barr"
+                 class="img-fluid rounded-circle shadow"
+                 style="max-width: 180px;">
           </div>
+
+          <!-- Example sections -->
           <div class="mb-4">
             <h5 class="font-weight-bold">Recent Events (2023–2024)</h5>
             <ul>
               <li>SACUBO Fall Workshop 2024 – Retaining Your Finance Workforce</li>
               <li>NACAS C3X 2024 – Enhancing Student Engagement in Food Services with Technology and Fun</li>
-              <li>NACAS C3X 2023 – Empowering Auxiliary Officers to be More Engaged in Campus Edge Projects (Panel Discussion)</li>
+              <li>NACAS C3X 2023 – Empowering Auxiliary Officers to be More Engaged in Campus Edge Projects...</li>
               <li>NACAS East/Central CX 2023 – Makin' Groceries: A look into VCU's new grocery store!</li>
             </ul>
           </div>
+
           <div class="mb-4">
             <h5 class="font-weight-bold">Virtual & Leadership Forums</h5>
             <ul>
-              <li>NACAS Virtual Leadership Forum 2020 – Leveraging the Value of Auxiliaries to Mitigate Campus Enrollment Challenges</li>
-              <li>NACAS Senior Leadership Institute 2018 – General Session: Creative Presentations That Captivate</li>
+              <li>NACAS Virtual Leadership Forum 2020 – Leveraging the Value of Auxiliaries...</li>
+              <li>NACAS Senior Leadership Institute 2018 – General Session: Creative Presentations...</li>
             </ul>
           </div>
+
           <div class="mb-4">
             <h5 class="font-weight-bold">Creative & Campus Engagement</h5>
             <ul>
@@ -235,6 +270,7 @@ counter-->
               <li>VCU School of Medicine 2017 – Now Presenting: Creative Presentations</li>
             </ul>
           </div>
+
           <div class="mb-4">
             <h5 class="font-weight-bold">Earlier Works</h5>
             <ul>
@@ -250,10 +286,15 @@ counter-->
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
       <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
-      <p class="mb-0"><a href="#" class="text-white">I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION</a></p>
+      <p class="mb-0">
+        <a href="#" class="text-white">
+          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
+        </a>
+      </p>
     </div>
   </footer>
 
@@ -264,17 +305,21 @@ counter-->
   <script src="js/jquery.counterup.min.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Dynamic VCU Days
+      // 1) Calculate days since Jan 5, 2015
       const startDate = new Date("2015-01-05");
-      const today = new Date();
-      const diffTime = today - startDate;
-      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-      document.getElementById("vcuDays").textContent = diffDays;
+      const diffDays = Math.floor((Date.now() - startDate) / (1000 * 60 * 60 * 24));
 
-      // Animated Counters
+      // 2) Assign that dynamic number to data-to for the 'Days on the Job' counter
+      const vcuDaysElem = document.getElementById("vcuDays");
+      vcuDaysElem.setAttribute("data-to", diffDays);
+
+      // 3) Animate the first three counters
       $('.counter-1').counterUp({ delay: 10, time: 3000 });
       $('.counter-2').counterUp({ delay: 10, time: 1500 });
       $('.counter-3').counterUp({ delay: 10, time: 2000 });
+
+      // 4) Animate the days on the job after setting data-to
+      $('.counter-days').counterUp({ delay: 10, time: 2500 });
     });
   </script>
 </body>
