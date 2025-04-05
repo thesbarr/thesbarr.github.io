@@ -36,6 +36,7 @@
     body {
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
     main {
@@ -55,10 +56,6 @@
 
     .navbar-nav .nav-link.active {
       color: #f8b800 !important;
-    }
-
-    footer {
-      margin-top: auto;
     }
   </style>
 </head>
@@ -94,17 +91,18 @@
     </div>
   </nav>
 
-  <!-- ✅ Hero Section (empty for now, add image/content later) -->
+  <!-- ✅ Hero Section -->
   <main>
     <section class="hero py-5">
       <div class="container">
-        <!-- Add content here -->
+        <!-- Optional: Add hero image or headline -->
+        <h1 class="text-center">Welcome to My Professional Portfolio</h1>
       </div>
     </section>
   </main>
 
-<!-- ✅ FOOTER -->
-<footer class="bg-dark text-white py-4">
+  <!-- ✅ Footer (auto-positioned to bottom if content is short) -->
+  <footer class="bg-dark text-white py-4">
     <div class="container text-center">
       <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
       <ul class="list-inline mb-0">
