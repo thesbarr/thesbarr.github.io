@@ -183,6 +183,62 @@ main {
   display: none;
 }
 
+/* ========== EXPERIENCE PAGE STYLES ========== */
+
+.navbar-nav .nav-link {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #f8b800 !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: #f8b800 !important;
+}
+
+.experience-section {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.experience-section .overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 4rem 2rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.job-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.company {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.location {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+ul.ps-3 li {
+  margin-bottom: 0.5rem;
+}
+
 /***************************
 		 General
 ***************************/
