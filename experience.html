@@ -1,198 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Stephen Barr - Professional Experience">
   <meta name="author" content="stephenabarr.com">
   <title>Stephen Barr | Experience</title>
 
   <!-- Bootstrap 5.3 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 
   <style>
-    .hover-animate {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    body {
+      margin: 0;
+      padding: 0;
     }
-    .hover-animate:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+
+    .experience-section {
+      position: relative;
+      color: #000;
+      padding: 5rem 0;
     }
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 2rem;
+
+    .experience-section .container {
+      position: relative;
+      z-index: 2;
     }
+
+    .experience-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    .bg-vcu::before {
+      background-image: url('images/vcubackground.jpg');
+    }
+
+    .bg-lsu::before {
+      background-image: url('images/LSUbackground.jpg');
+    }
+
+    .bg-alley::before {
+      background-image: url('images/alleybackground.jpg');
+    }
+
     .job-title {
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 700;
     }
+
     .company {
       font-size: 1.1rem;
-      font-weight: 500;
+      font-weight: 600;
     }
+
     .location, .dates {
-      font-size: 0.95rem;
-      color: #666;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
     }
-    .experience-section {
-      padding: 4rem 0;
-      border-bottom: 1px solid #ccc;
+
+    .list-style-icon li {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-link-style {
+      margin-top: 1rem;
+    }
+
+    footer {
+      background: #111;
+      color: white;
     }
   </style>
 </head>
-
 <body>
- <!-- ✅ Navbar -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo-dark.png" alt="Stephen Barr Logo" height="40" />
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#mainNavbar" aria-controls="mainNavbar"
-              aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="experience.html">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="beyond-the-desk.html">Beyond the Desk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="contact.html">Contact</a>
-          </li>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/logo-dark.png" alt="Stephen Barr Logo" height="40" />
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar" aria-controls="mainNavbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="experience.html">Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="beyond-the-desk.html">Beyond the Desk</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- VCU Section -->
+<section class="experience-section bg-vcu">
+  <div class="container">
+    <div class="row align-items-center text-dark">
+      <div class="col-md-6">
+        <img src="images/device/VCU-Exp.png" class="img-fluid rounded shadow-sm" alt="VCU Experience">
+      </div>
+      <div class="col-md-6">
+        <h3 class="job-title">Director of Business Services</h3>
+        <p class="company">Virginia Commonwealth University</p>
+        <p class="location">Richmond, VA</p>
+        <p class="dates">August 2023 – Present</p>
+        <ul class="list-style-icon">
+          <li>Provides strategic oversight for VCU Business Services, ensuring operational excellence across key service areas.</li>
+          <li>Leads long-term initiatives including dining master plans and large-scale construction/renovation projects.</li>
+          <li>Expands food insecurity programming and student support initiatives.</li>
+          <li>Manages multimillion-dollar contracts, budgeting, and staff leadership.</li>
         </ul>
+        <a class="btn btn-outline-dark btn-link-style" href="https://www.bsv.vcu.edu" target="_blank">Visit VCU Business Services</a>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- Experience Section: VCU -->
-  <section class="experience-section bg-light">
-    <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-          <img src="images/device/VCU-Exp.png" alt="VCU" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-md-6">
-          <h3 class="job-title">Director of Business Services</h3>
-          <p class="company">Virginia Commonwealth University</p>
-          <p class="location">Richmond, VA</p>
-          <p class="dates">August 2023 – Present</p>
-          <ul class="list-style-icon list-style-none">
-            <li><span class="ti-pencil-alt"></span> Provides strategic oversight for VCU Business Services, including Campus Services, Mail Services, and Trademarks & Licensing (prior to transition), ensuring operational excellence across key service areas supporting over 28,000 students.</li>
-            <li><span class="ti-pencil-alt"></span> Leads long-term planning initiatives such as the VCU Dining Master Plan and two major dining facility construction/renovation projects totaling over 70,000 sq. ft.</li>
-            <li><span class="ti-pencil-alt"></span> Expands campus-wide food insecurity initiatives through cross-departmental partnerships, aligning services with student well-being and emergency support systems.</li>
-            <li><span class="ti-pencil-alt"></span> Oversees strategic budget management, project execution, and team leadership, emphasizing innovation, data-informed decisions, and service optimization.</li>
-            <li><span class="ti-pencil-alt"></span> Negotiates and administers complex institutional contracts, optimizing service quality and financial outcomes for the university.</li>
-          </ul>
+<!-- LSU Section -->
+<section class="experience-section bg-lsu">
+  <div class="container">
+    <div class="row align-items-center text-dark">
+      <div class="col-md-6 order-md-2">
+        <img src="images/device/LSU-exp.png" class="img-fluid rounded shadow-sm" alt="LSU Experience">
+      </div>
+      <div class="col-md-6">
+        <h3 class="job-title">Director, Retail Development and Technology</h3>
+        <p class="company">Louisiana State University</p>
+        <p class="location">Baton Rouge, LA</p>
+        <p class="dates">July 2011 – December 2014</p>
+        <ul class="list-style-icon">
+          <li>Managed $40M in contracts including dining, retail, and campus services.</li>
+          <li>Launched PCI compliance initiatives and broad technology enhancements.</li>
+        </ul>
 
-          <h4 class="job-title mt-4">Director of Campus Services</h4>
-          <p class="company">Virginia Commonwealth University</p>
-          <p class="location">Richmond, VA</p>
-          <p class="dates">January 2015 – August 2023</p>
-          <ul class="list-style-icon list-style-none">
-            <li><span class="ti-pencil-alt"></span> Directed a multi-unit portfolio including VCU Dining, Vending, RamTech, Barnes & Noble, Dental Supply, and graduation services, with over $45M in annual sales.</li>
-            <li><span class="ti-pencil-alt"></span> Managed and awarded over $800K in scholarships and grants annually to support student success and retention efforts.</li>
-            <li><span class="ti-pencil-alt"></span> Led development of digital solutions including mobile ordering, inventory management, and digital signage to enhance student-facing service delivery.</li>
-            <li><span class="ti-pencil-alt"></span> Drove collaborative efforts with Student Affairs on events, sustainability, wellness, and diversity initiatives that advanced institutional priorities.</li>
-            <li><span class="ti-pencil-alt"></span> Successfully negotiated high-value service agreements that provided millions in university support funding while enhancing academic alignment.</li>
-          </ul>
-        </div>
+        <h4 class="job-title mt-4">Assistant Director</h4>
+        <p class="dates">September 2008 – July 2011</p>
+        <ul class="list-style-icon">
+          <li>Oversaw Tiger Card Office operations and joint auxiliary agreements across LSU campuses.</li>
+        </ul>
+
+        <h4 class="job-title mt-4">Manager, Tiger Card Office</h4>
+        <p class="dates">October 2007 – September 2008</p>
+        <ul class="list-style-icon">
+          <li>Directed ID card services across five LSU institutions.</li>
+        </ul>
+
+        <h4 class="job-title mt-4">Assistant Technical Director, LSU Theatre</h4>
+        <p class="dates">August 2005 – October 2007</p>
+        <ul class="list-style-icon">
+          <li>Instructed courses and oversaw production logistics for theatre programs.</li>
+        </ul>
+        <a class="btn btn-outline-dark btn-link-style" href="https://www.lsu.edu/auxiliary-services/index.php" target="_blank">Visit LSU Auxiliary Services</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Experience Section: LSU -->
-  <section class="experience-section">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0">
-          <img src="images/device/LSU-exp.png" alt="LSU" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-md-6">
-          <h3 class="job-title">Director, Retail Development and Technology</h3>
-          <p class="company">Louisiana State University</p>
-          <p class="location">Baton Rouge, LA</p>
-          <p class="dates">July 2011 – December 2014</p>
-          <ul class="list-style-icon list-style-none">
-            <li><span class="ti-pencil-alt"></span> Oversaw $40M in retail and service contracts including Chartwells, Coke, Barnes & Noble, Ricoh, Canteen, Tapingo, Blackboard, and Kaplan, ensuring compliance and performance outcomes.</li>
-            <li><span class="ti-pencil-alt"></span> Implemented wide-ranging tech enhancements: digital wayfinding, event tracking, 85+ POS installs, cloud-based systems, and enhanced security (surveillance and PCI compliance).</li>
-            <li><span class="ti-pencil-alt"></span> Developed LSU’s inaugural PCI policy to increase data protection standards campus-wide.</li>
-            <li><span class="ti-pencil-alt"></span> Championed new business development and retail strategies for LSU Union services in partnership with campus stakeholders.</li>
-          </ul>
-
-          <h4 class="job-title mt-4">Assistant Director</h4>
-          <p class="company">Louisiana State University</p>
-          <p class="dates">September 2008 – July 2011</p>
-          <ul class="list-style-icon list-style-none">
-            <li><span class="ti-pencil-alt"></span> Oversaw operations and reporting for the LSU Tiger Card Office and facilitated financial analytics supporting strategic improvements.</li>
-            <li><span class="ti-pencil-alt"></span> Enhanced ID card transaction services across five LSU campuses through contract administration and cross-campus MOUs.</li>
-            <li><span class="ti-pencil-alt"></span> Supported operational and technological upgrades to enhance efficiency across auxiliary services.</li>
-          </ul>
-
-          <h4 class="job-title mt-4">Manager, Tiger Card Office</h4>
-          <p class="company">Louisiana State University</p>
-          <p class="dates">October 2007 – September 2008</p>
-          <ul class="list-style-icon list-style-none">
-            <li><span class="ti-pencil-alt"></span> Directed production and management of 45,000+ active LSU ID cards and associated services across five campuses.</li>
-
-          <h4 class="job-title mt-4">Assistant Technical Director, LSU Theatre</h4>
-          <p class="company">Louisiana State University</p>
-          <p class="dates">August 2005 – October 2007</p>
-          <ul class="list-style-icon list-style-none">
-            <li><span class="ti-pencil-alt"></span> Delivered instruction in theatre lab courses, managed scene shop operations, and supported academic and professional production logistics.</li>
-            <li><span class="ti-pencil-alt"></span> Oversaw procurement and construction coordination for stage productions, ensuring quality and safety standards.</li>
-          </ul>
-        </div>
+<!-- Alley Theatre Section -->
+<section class="experience-section bg-alley">
+  <div class="container">
+    <div class="row align-items-center text-dark">
+      <div class="col-md-6">
+        <img src="images/device/Alley-exp.png" class="img-fluid rounded shadow-sm" alt="Alley Theatre Experience">
+      </div>
+      <div class="col-md-6">
+        <h3 class="job-title">Assistant Technical Director</h3>
+        <p class="company">Alley Theatre</p>
+        <p class="location">Houston, TX</p>
+        <p class="dates">August 2001 – July 2005</p>
+        <ul class="list-style-icon">
+          <li>Estimated and tracked nearly $1M in scenic budgets annually.</li>
+          <li>Supervised shop crews, materials procurement, and scenic construction for major productions.</li>
+        </ul>
+        <a class="btn btn-outline-dark btn-link-style" href="https://www.alleytheatre.org/" target="_blank">Visit Alley Theatre</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Experience Section: Alley Theatre -->
-  <section class="experience-section bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-          <img src="images/device/Alley-exp.png" alt="Alley Theatre" class="img-fluid rounded shadow-sm">
-        </div>
-        <div class="col-md-6">
-          <h3 class="job-title">Assistant Technical Director</h3>
-          <p class="company">Alley Theatre</p>
-          <p class="location">Houston, TX</p>
-          <p class="dates">August 2001 – July 2005</p>
-          <ul class="list-style-icon list-style-none">
-            <li><span class="ti-pencil-alt"></span> Estimated and managed production budgets totaling nearly $1 million annually for 14+ productions.</li>
-            <li><span class="ti-pencil-alt"></span> Supervised scenic construction, led research on construction methods, and managed procurement and labor coordination.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4">
+  <div class="container">
+    <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
+    <p class="mb-0"><a href="#" class="text-white">I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION</a></p>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white py-4 text-center">
-    <div class="container">
-      <p class="mb-1">&copy; 2025 Stephen Barr. All Rights Reserved.</p>
-      <p class="mb-0">
-        <a href="#" class="text-white">I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
