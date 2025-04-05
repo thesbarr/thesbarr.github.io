@@ -173,6 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 ==================================================== */
 .experience-section {
   padding: 4rem 2rem;
+  background-color: hsl(46, 100%, 94%); /* Light gray to contrast white cards */
 }
 
 .experience-card {
@@ -190,6 +191,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .experience-card p {
   margin: 0.5rem 0;
+}
+
+.experience-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff;
+}
+
+.experience-section .overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
+  padding: 4rem 2rem;
+}
+
+.experience-section h2,
+.experience-section h3,
+.experience-section h4,
+.experience-section p,
+.experience-section li {
+  color: #fff;
+}
+
+.experience-section ul {
+  padding-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .experience-section .overlay {
+    padding: 2rem 1rem;
+  }
 }
 
 /* ====================================================
