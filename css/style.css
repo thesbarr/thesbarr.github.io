@@ -76,6 +76,69 @@ NOTE: This is main stylesheet of template, This file contains the styling for th
 ======================================
 [ End table content ]
 ======================================*/
+/***************************
+		Timeline
+***************************/
+
+  .timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-left: 4px solid #f8b800;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 0;
+    height: 100%;
+    width: 12px;
+    background: white;
+    border: 3px solid #f8b800;
+    border-radius: 50%;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    background: #f8b800;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+
+  .timeline-date {
+    font-weight: bold;
+    color: #555;
+  }
+
+  .timeline-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-subtitle {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+    color: #666;
+  }
+
+  .timeline-description {
+    color: #333;
+  }
+
 
 /***************************
 		 General
