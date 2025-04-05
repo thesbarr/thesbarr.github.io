@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -12,23 +12,28 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- Flexbox layout rules -->
+  <!-- Make page fill screen & allow sticky footer -->
   <style>
-    /* Make the entire page fill the browser window */
     html, body {
       height: 100%;
       margin: 0;
       padding: 0;
     }
-    /* Set body as a flex container */
     body {
       display: flex;
       flex-direction: column;
     }
-    /* Let main expand to fill leftover vertical space */
     main {
       flex: 1;
+      background: url("images/Contact_Background.jpg") center center/cover no-repeat;
     }
+    /* OPTIONAL: Make form background more readable with a box or semi-transparent bg
+    .contact-form-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 0.5rem;
+      padding: 2rem;
+    }
+    */
   </style>
 </head>
 <body>
@@ -38,8 +43,10 @@
     <nav id="menu" class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="images/logo-dark.png" alt="Stephen Barr logo" class="logo-dark d-inline-block" style="height: 40px;">
-          <img src="images/logo-light.png" alt="Stephen Barr logo" class="logo-light d-none" style="height: 40px;">
+          <img src="images/logo-dark.png" alt="Stephen Barr logo"
+               class="logo-dark d-inline-block" style="height: 40px;">
+          <img src="images/logo-light.png" alt="Stephen Barr logo"
+               class="logo-light d-none" style="height: 40px;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarNav" aria-controls="navbarNav"
@@ -59,20 +66,22 @@
   </header>
 
   <!-- ===== MAIN CONTENT ===== -->
-  <main class="py-5"
-        style="background: linear-gradient(135deg, #f9f9f9 0%, #e9ecef 100%);">
+  <main class="py-5 d-flex align-items-center">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <h1 class="mb-4 text-center">Contact Me</h1>
-          <p class="text-center text-muted mb-4">
-            Let’s connect — fill out the form below or connect on LinkedIn.
+          <h1 class="mb-4 text-center text-white">Contact Me</h1>
+          <p class="text-center text-light mb-4">
+            Let’s connect — fill out the form below or reach out on LinkedIn.
           </p>
 
-          <!-- Form -->
+          <!-- 
+            If you want the form on a semi-transparent background, 
+            wrap these in a .contact-form-container 
+          -->
           <form action="https://formspree.io/stephen@stephenabarr.com" method="POST">
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name" class="text-white">Name</label>
               <input
                 type="text"
                 name="name"
@@ -83,7 +92,7 @@
               >
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" class="text-white">Email</label>
               <input
                 type="email"
                 name="email"
@@ -94,7 +103,7 @@
               >
             </div>
             <div class="form-group">
-              <label for="subject">Subject</label>
+              <label for="subject" class="text-white">Subject</label>
               <input
                 type="text"
                 name="subject"
@@ -104,7 +113,7 @@
               >
             </div>
             <div class="form-group">
-              <label for="message">Message</label>
+              <label for="message" class="text-white">Message</label>
               <textarea
                 name="message"
                 id="message"
@@ -126,12 +135,21 @@
             <a
               href="https://www.linkedin.com/in/stephenabarr/"
               target="_blank"
-              class="btn btn-outline-primary"
+              class="btn btn-outline-light"
               aria-label="LinkedIn"
             >
               <i class="fa fa-linkedin mr-2"></i>Connect on LinkedIn
             </a>
           </div>
+
+          <!-- Photo Credit -->
+          <p class="text-center text-white mt-5 small">
+            Photo courtesy of 
+            <a href="https://gratisography.com/photo/business-idea-background/"
+               class="text-white" target="_blank">
+              Gratisography
+            </a>
+          </p>
 
         </div> <!-- end col-md-8 -->
       </div> <!-- end row -->
@@ -170,7 +188,6 @@
           logoLight.classList.add("d-none");
         }
       }
-
       updateLogo();
       window.addEventListener("scroll", updateLogo);
     });
