@@ -171,57 +171,70 @@ h1, h2, h3, h4, h5, h6 {
 /* ====================================================
    6. Experience Section
 ==================================================== */
+
+/* General section padding and background color */
 .experience-section {
   padding: 4rem 2rem;
-  background-color: hsl(43, 9%, 85%); /* Light gray to contrast white cards */
+  background-color: hsl(43, 9%, 85%); /* soft beige background */
+  color: #000; /* Default text color for readability */
 }
 
-.experience-card {
-  background-color: #f8f9fa;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-}
-
-.experience-card h3 {
-  color: var(--vcu-black);
-  font-size: 1.5rem;
-}
-
-.experience-card p {
-  margin: 0.5rem 0;
-}
-
-.experience-section {
+/* Optional: Overlay version (for image backgrounds) */
+.experience-section.overlay {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  color: #fff;
+  color: #fff; /* White text for dark overlays */
 }
 
-.experience-section .overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent dark overlay */
+.experience-section.overlay .overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black overlay */
   padding: 4rem 2rem;
 }
 
-.experience-section h2,
-.experience-section h3,
-.experience-section h4,
-.experience-section p,
-.experience-section li {
+.experience-section.overlay h2,
+.experience-section.overlay h3,
+.experience-section.overlay h4,
+.experience-section.overlay p,
+.experience-section.overlay li {
   color: #fff;
 }
 
-.experience-section ul {
-  padding-left: 1.2rem;
+/* Section title styling */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--vcu-black); /* Ensures black on beige */
 }
 
-@media (max-width: 768px) {
-  .experience-section .overlay {
-    padding: 2rem 1rem;
-  }
+/* Card formatting inside experience section */
+.experience-card,
+.card {
+  background-color: #f8f9fa;
+  color: #000;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings inside cards */
+.experience-card h3,
+.card h3,
+.card h5 {
+  color: var(--vcu-black);
+  font-weight: 700;
+}
+
+/* Body text inside cards */
+.experience-card p,
+.card p,
+.card ul li {
+  margin: 0.5rem 0;
+  color: #000;
 }
 
 /* ====================================================
