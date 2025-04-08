@@ -357,25 +357,23 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--vcu-black);
 }
 
-.mac-frame-wrapper {
-  width: 100%;
-  max-width: 512px;
-  position: relative;
-  margin: 0 auto;
-}
-
 /* ====================================================
    11. Mac Emulator
 ==================================================== */
 
+.mac-frame-wrapper {
+  position: relative;
+  max-width: 700px; /* You can increase this value */
+  margin: 0 auto;
+}
+
 .emulator-canvas {
-  top: 79px;       /* Adjust these values to align with screen in SVG */
-  left: 45px;
-  width: 422px;
-  height: 284px;
-  z-index: 2;
-  border: none;
-  outline: none;
+  position: absolute;
+  top: 16.5%;
+  left: 12.5%;
+  width: 75%;
+  height: auto;
+  z-index: 10;
 }
 /* ====================================================
    12. Legacy / Unused Components
