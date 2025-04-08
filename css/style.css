@@ -363,16 +363,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .mac-frame-wrapper {
   position: relative;
-  max-width: 700px; /* You can increase this value */
+  max-width: 700px;
   margin: 0 auto;
+}
+
+.mac-frame-wrapper img {
+  width: 100%;
+  display: block;
 }
 
 .emulator-canvas {
   position: absolute;
-  top: 16.5%;
-  left: 12.5%;
-  width: 75%;
-  height: auto;
+  top: 11.7%;
+  left: 15.1%;
+  width: 69.8%;
+  aspect-ratio: 512 / 342;
   z-index: 10;
 }
 /* ====================================================
