@@ -23,7 +23,9 @@ macplus({
     // FLOPPY DISKS
     '/disks/mac-powerpoint-1.0.image',
 
-    //MACPAINT: '/disks/macpaint.image',
+    //MACPAINT: 
+    '/disks/macpaint.image',
+    
     //KID PIX: '/disks/kid-pix.dsk',
     //BLANK: '/disks/800K.dsk',
 
