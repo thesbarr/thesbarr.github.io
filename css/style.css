@@ -357,8 +357,28 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--vcu-black);
 }
 
+.mac-frame-wrapper {
+  width: 100%;
+  max-width: 512px;
+  position: relative;
+  margin: 0 auto;
+}
+
 /* ====================================================
-   11. Legacy / Unused Components
+   11. Mac Emulator
+==================================================== */
+
+.emulator-canvas {
+  top: 79px;       /* Adjust these values to align with screen in SVG */
+  left: 45px;
+  width: 422px;
+  height: 284px;
+  z-index: 2;
+  border: none;
+  outline: none;
+}
+/* ====================================================
+   12. Legacy / Unused Components
 ==================================================== */
 /* Template-related styles no longer in use */
 /*
