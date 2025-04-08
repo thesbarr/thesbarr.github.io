@@ -7,39 +7,34 @@
   <meta name="description" content="A passion for presenting, explored through a nostalgic Macintosh emulator experience." />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
-  <!-- Bootstrap + Fonts + Your Styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-
+  <link rel="stylesheet" href="css/pce-ui.css" />
+  <link rel="stylesheet" href="css/pce-ui-macplus.css" />
   <style>
     body {
       background-color: #f5f5f5;
       font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
     main {
-      padding: 4rem 1rem 2rem;
+      padding: 4rem 2rem 2rem;
       text-align: center;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: #101820;
     }
 
     .intro-text {
       max-width: 700px;
       margin: 0 auto 2rem;
       font-size: 1.1rem;
-      color: #333;
     }
 
     .mac-frame-wrapper {
       position: relative;
-      width: 100%;
-      max-width: 640px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
@@ -49,92 +44,72 @@
       display: block;
     }
 
-    .emulator-canvas {
+    .pcejs-canvas {
       position: absolute;
-      top: 16.2%;
-      left: 12.6%;
-      width: 75%;
-      aspect-ratio: 512 / 342;
-      z-index: 10;
-    }
-
-    @media (max-width: 768px) {
-      .emulator-canvas {
-        top: 16.5%;
-        left: 12%;
-        width: 76%;
-      }
+      top: 15.8%;
+      left: 11.3%;
+      width: 77.3%;
+      height: 57.4%;
+      z-index: 5;
     }
 
     .pcejs-loading-status {
-      color: #999;
-      font-size: 1rem;
       margin-bottom: 1rem;
+      color: #555;
     }
   </style>
 </head>
 
 <body>
-  <!-- ✅ NAVBAR -->
+  <!-- ✅ Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo-light.png" alt="Stephen Barr Logo" height="40" />
+        <img src="images/logo-light.png" alt="Stephen Barr Logo" height="36" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="experience.html">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold active" href="beyond-the-desk.html">Beyond the Desk</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="contact.html">Contact</a>
-          </li>
+          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold active" href="beyond-the-desk.html">Beyond the Desk</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ✅ MAIN CONTENT -->
+  <!-- ✅ Content -->
   <main>
     <h1 class="section-title mb-4">Macintosh Emulator</h1>
     <p class="intro-text">
       I have a passion for presenting, and I thought it would be fun to revisit one of the earliest Mac experiences I had with presentations. 
-      A colleague found this emulator online and paired it with a graphic originally used on his site (the now-retired "Modern Slide"). 
-      His site may be gone, but the image lives on. Enjoy!
+      I found this emulator online and paired it with a graphic originally used by a colleague from the now-retired "Modern Slide" site. 
+      The site may be gone, but the image lives on. Enjoy!
     </p>
 
     <div class="pcejs pcejs-loading-status">Loading emulator...</div>
 
     <div class="mac-frame-wrapper">
       <img src="images/macplus.svg" alt="Classic Macintosh Frame" />
-      <canvas class="pcejs pcejs-canvas emulator-canvas" oncontextmenu="event.preventDefault()"></canvas>
+      <canvas class="pcejs pcejs-canvas" oncontextmenu="event.preventDefault()"></canvas>
     </div>
   </main>
 
-  <!-- ✅ FOOTER -->
+  <!-- ✅ Footer -->
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
       <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
       <p class="mb-0">
-        <a href="#" class="text-white">
-          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
-        </a>
+        <a href="#" class="text-white">I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION</a>
       </p>
     </div>
   </footer>
 
-  <!-- ✅ JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="/js/bundle.js"></script>
-  <script src="/js/rAF.js"></script>
+  <!-- ✅ Scripts -->
+  <script src="js/bundle.js"></script>
+  <script src="js/rAF.js"></script>
 </body>
 </html>
