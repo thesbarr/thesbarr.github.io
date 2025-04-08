@@ -21,7 +21,7 @@ macplus({
     './mobile/drives/hd2.img',
 
     // FLOPPY DISKS
-    '.mobile//disks/mac-powerpoint-1.0.image',
+    './mobile//disks/mac-powerpoint-1.0.image',
     //'./disks/Adobe Illustrator 1.1.image',
 
     //MACPAINT: '/disks/macpaint.image',
