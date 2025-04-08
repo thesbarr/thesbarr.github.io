@@ -10,18 +10,18 @@ macplus({
   autoloadFiles: [
 
     // ROMS
-    './roms/macplus-pcex.rom',
-    './roms/mac-plus.rom',
+    './mobile/roms/macplus-pcex.rom',
+    './mobile/roms/mac-plus.rom',
 
     // CONFIGURATION
-    './pce-config.cfg',
+    './mobile/pce-config.cfg',
 
     // HARD DRIVES
-    './drives/hd1.qed',
-    './drives/hd2.img',
+    './mobile/drives/hd1.qed',
+    './mobile/drives/hd2.img',
 
     // FLOPPY DISKS
-    './disks/mac-powerpoint-1.0.image',
+    '.mobile//disks/mac-powerpoint-1.0.image',
     //'./disks/Adobe Illustrator 1.1.image',
 
     //MACPAINT: '/disks/macpaint.image',
