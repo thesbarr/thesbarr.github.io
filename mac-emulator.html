@@ -3,76 +3,126 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Classic Mac Emulator | Stephen Barr" />
-  <meta name="author" content="stephenabarr.com" />
-  <title>Classic Mac Emulator</title>
+  <title>Macintosh Emulator | Stephen Barr</title>
+  <meta name="description" content="A passion for presenting, explored through a nostalgic Macintosh emulator experience." />
+  <link rel="icon" href="images/favicon.png" type="image/png" />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- Styles -->
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      background-color: #f5f5f5;
+      color: #101820;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #101820;
+      padding: 1rem 0;
+    }
+
+    .navbar-brand img {
+      height: 36px;
+    }
+
+    main {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .intro-text {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
+    .mac-frame-wrapper {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .mac-frame-wrapper img {
+      width: 100%;
+      display: block;
+    }
+
+    .emulator-canvas {
+      position: absolute;
+      top: 16.5%;
+      left: 12.5%;
+      width: 75%;
+      height: auto;
+      z-index: 10;
+    }
+
+    .footer {
+      background-color: #101820;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .footer a {
+      color: #ffb400;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #fff;
+    }
+
+    /* Hide loading by default but present for JS fallback */
+    .pcejs-loading-status {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #888;
+    }
+  </style>
 </head>
 
 <body>
-
-  <!-- ✅ NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
+  <!-- ✅ HEADER -->
+  <header>
+    <div class="container text-center">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo-light.png" alt="Stephen Barr Logo" height="36" />
+        <img src="images/logo-light.png" alt="Stephen Barr Logo" />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold" href="experience.html">Experience</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold" href="beyond-the-desk.html">Beyond the Desk</a></li>
-          <li class="nav-item"><a class="nav-link nav-link-bold nav-hover-gold" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
     </div>
-  </nav>
+  </header>
 
-<!-- ✅ CLASSIC MAC EMULATOR SECTION -->
-<section class="mac-emulator text-center py-5">
-    <div class="container">
-      <h1 class="section-title mb-3">Classic Mac Emulator</h1>
-      <p class="mb-4" style="max-width: 700px; margin: 0 auto;">
-        I’ve always had a passion for presenting — and some of my earliest experiences with that came on a classic Macintosh.
-        I thought it would be fun to recreate that nostalgia. This emulator lets you explore one of the first presentation tools I used.
-        The Mac image above was originally featured on a site called <em>Modern Slide</em>, created by a former college.
-        While the site no longer exists, the image lives on. Enjoy the trip back!
-      </p>
+  <!-- ✅ MAIN CONTENT -->
+  <main>
+    <h1 class="section-title mb-4">Macintosh Emulator</h1>
+    <p class="intro-text">
+      I have a passion for presenting, and I thought it would be fun to revisit one of the earliest Mac experiences I had with presentations. 
+      I found this emulator online and paired it with a graphic originally used by a colleague from the now-retired "Modern Slide" site. 
+      The site may be gone, but the image lives on. Enjoy!
+    </p>
 
-      <div class="mac-frame-wrapper mx-auto position-relative" style="max-width: 512px;">
-        <img src="images/macplus.svg" class="img-fluid" alt="Classic Mac Frame">
-        <canvas class="emulator-canvas position-absolute" width="512" height="342" oncontextmenu="event.preventDefault()"></canvas>
-      </div>
+    <div class="pcejs pcejs-loading-status">Loading emulator...</div>
+
+    <div class="mac-frame-wrapper">
+      <img src="images/macplus.svg" alt="Classic Macintosh Frame" />
+      <canvas class="pcejs pcejs-canvas emulator-canvas" oncontextmenu="event.preventDefault()"></canvas>
     </div>
-  </section>
+  </main>
 
   <!-- ✅ FOOTER -->
-  <footer class="bg-dark text-white text-center py-4 mt-auto">
+  <footer class="footer">
     <div class="container">
       <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
       <p class="mb-0">
-        <a href="#" class="text-white">I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION</a>
+        <a href="#">I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION</a>
       </p>
     </div>
   </footer>
 
-  <!-- ✅ JS Scripts -->
+  <!-- ✅ Emulator Scripts -->
   <script src="/js/bundle.js"></script>
   <script src="/js/rAF.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- ✅ Mobile Redirect -->
-  <script>
-    if ('ontouchstart' in window && window.matchMedia && window.matchMedia('(max-device-width: 1024px)').matches) {
-      window.location.replace('./mobile/');
-    }
-  </script>
 </body>
 </html>
