@@ -29,9 +29,9 @@
 
   <!-- Fix: Redirect all paths to /mobile/ -->
   <script>
-    var Module = {
+    window.Module = {
       locateFile: function (path) {
-        return "mobile/" + path;
+        return "/mobile/" + path;
       }
     };
   </script>
