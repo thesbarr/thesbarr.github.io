@@ -7,95 +7,76 @@
   <meta name="description" content="A passion for presenting, explored through a nostalgic Macintosh emulator experience." />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
-  <!-- Styles -->
+  <!-- Bootstrap + Fonts + Your Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+
   <style>
     body {
       background-color: #f5f5f5;
-      color: #101820;
       font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #101820;
-      padding: 1rem 0;
-    }
-
-    .navbar-brand img {
-      height: 36px;
     }
 
     main {
-      padding: 4rem 2rem 2rem;
+      padding: 4rem 1rem 2rem;
       text-align: center;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #101820;
     }
 
     .intro-text {
       max-width: 700px;
       margin: 0 auto 2rem;
       font-size: 1.1rem;
+      color: #333;
     }
 
     .mac-frame-wrapper {
       position: relative;
-      max-width: 700px;
+      width: 100%;
+      max-width: 640px;
       margin: 0 auto;
     }
 
     .mac-frame-wrapper img {
       width: 100%;
+      height: auto;
       display: block;
     }
 
     .emulator-canvas {
       position: absolute;
-      top: 16.5%;
-      left: 12.5%;
+      top: 16.2%;
+      left: 12.6%;
       width: 75%;
-      height: auto;
+      aspect-ratio: 512 / 342;
       z-index: 10;
     }
 
-    .footer {
-      background-color: #101820;
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
+    @media (max-width: 768px) {
+      .emulator-canvas {
+        top: 16.5%;
+        left: 12%;
+        width: 76%;
+      }
     }
 
-    .footer a {
-      color: #ffb400;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      color: #fff;
-    }
-
-    /* Hide loading by default but present for JS fallback */
     .pcejs-loading-status {
-      text-align: center;
+      color: #999;
+      font-size: 1rem;
       margin-bottom: 1rem;
-      color: #888;
     }
   </style>
 </head>
 
 <body>
-  <!-- ✅ HEADER -->
-  <header>
-    <div class="container text-center">
-      <a class="navbar-brand" href="index.html">
-        <img src="images/logo-light.png" alt="Stephen Barr Logo" />
-      </a>
-    </div>
-  </header>
-
-  <!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <!-- ✅ NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
         <img src="images/logo-light.png" alt="Stephen Barr Logo" height="40" />
@@ -151,7 +132,8 @@
     </div>
   </footer>
 
-  <!-- ✅ Emulator Scripts -->
+  <!-- ✅ JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/bundle.js"></script>
   <script src="/js/rAF.js"></script>
 </body>
