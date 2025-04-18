@@ -7,7 +7,7 @@
   <meta name="description" content="A passion for presenting, explored through a nostalgic Macintosh emulator experience." />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
-  <!-- Bootstrap + Fonts + Your Styles -->
+  <!-- Bootstrap + Icons + Your Styles -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="css/style.css" />
@@ -16,56 +16,49 @@
     body {
       background-color: #f5f5f5;
       font-family: 'Open Sans', sans-serif;
+      margin: 0;
     }
-
+    nav.navbar { z-index: 20; } /* ensure navbar stays on top */
     main {
       padding: 4rem 1rem 2rem;
       text-align: center;
     }
-
     .section-title {
       font-size: 2.5rem;
       font-weight: 700;
       color: #101820;
     }
-
     .intro-text {
       max-width: 700px;
       margin: 0 auto 2rem;
       font-size: 1.1rem;
       color: #333;
     }
-
     .mac-frame-wrapper {
       position: relative;
       width: 100%;
-      max-width: 640px;
+      max-width: 700px;
       margin: 0 auto;
     }
-
     .mac-frame-wrapper img {
       width: 100%;
       height: auto;
       display: block;
     }
-
     .emulator-canvas {
       position: absolute;
-      top: 16.2%;
-      left: 12.6%;
+      /* inset: top right bottom left */
+      inset: 16.2% 12.5% auto 12.5%;
       width: 75%;
       aspect-ratio: 512 / 342;
-      z-index: 10;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
-
     @media (max-width: 768px) {
       .emulator-canvas {
-        top: 16.5%;
-        left: 12%;
+        inset: 16.5% 12% auto 12%;
         width: 76%;
       }
     }
-
     .pcejs-loading-status {
       color: #999;
       font-size: 1rem;
@@ -75,7 +68,7 @@
 </head>
 
 <body>
-  <!-- ✅ NAVBAR -->
+  <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -103,36 +96,39 @@
     </div>
   </nav>
 
-  <!-- ✅ MAIN CONTENT -->
+  <!-- MAIN -->
   <main>
     <h1 class="section-title mb-4">Macintosh Emulator</h1>
     <p class="intro-text">
-      I have a passion for presenting, and I thought it would be fun to revisit one of the earliest Mac experiences I had with presentations. 
-      I found this emulator online and paired it with a graphic originally used by a colleague from the now-retired "Modern Slide" site. 
+      I have a passion for presenting, and I thought it would be fun to revisit one of the earliest Mac experiences I had with presentations.
+      I found this emulator online and paired it with a graphic originally used by a colleague from the now‑retired “Modern Slide” site.
       The site may be gone, but the image lives on. Enjoy!
     </p>
 
-    <div class="pcejs pcejs-loading-status">Loading emulator...</div>
+    <div class="pcejs pcejs-loading-status">Loading emulator…</div>
 
     <div class="mac-frame-wrapper">
+      <!-- your SVG frame -->
       <img src="images/macplus.svg" alt="Classic Macintosh Frame" />
-      <canvas class="pcejs pcejs-canvas emulator-canvas" oncontextmenu="event.preventDefault()"></canvas>
+      <!-- emulator canvas, absolutely positioned to sit in the “screen” window -->
+      <canvas class="pcejs pcejs-canvas emulator-canvas"
+              oncontextmenu="event.preventDefault()"></canvas>
     </div>
   </main>
 
-  <!-- ✅ FOOTER -->
+  <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
+      <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
       <p class="mb-0">
         <a href="#" class="text-white">
-          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
+          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
         </a>
       </p>
     </div>
   </footer>
 
-  <!-- ✅ JS -->
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="/js/bundle.js"></script>
   <script src="/js/rAF.js"></script>
