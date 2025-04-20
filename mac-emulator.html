@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macintosh Emulator | Stephen Barr</title>
+  <title>Macintosh Emulator | Stephen Barr</title>
   <meta name="description" content="A passion for presenting, explored through a nostalgic Macintosh emulator experience." />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
@@ -19,12 +19,16 @@
     /* page‑specific overrides */
     body {
       background-color: #f5f5f5;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
     }
     main {
-      padding: 4rem 1rem 2rem;
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+    }
+    .section-title,
+    .intro-text {
       text-align: center;
     }
     .section-title {
@@ -34,36 +38,34 @@
     }
     .intro-text {
       max-width: 700px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 2rem;
       font-size: 1.1rem;
       color: #333;
     }
 
-    /* -- Frame + Canvas positioning -- */
+    /* Frame + canvas positioning */
     .mac-frame-wrapper {
       position: relative;
       width: 100%;
-      max-width: 800px;        /* enlarged from 700px */
+      max-width: 800px;    /* SVG will scale up to 800px wide */
       margin: 0 auto;
     }
     .mac-frame-wrapper img {
       width: 100%;
-      height: auto;
       display: block;
     }
     .emulator-canvas {
       position: absolute;
-      /* top, right, bottom, left */
-      inset: 16.8% 13.2% auto 13.2%;
-      width: 73.6%;
+      inset: 17% 18% auto 18%;  /* top right bottom left */
+      width: 64%;               /* ~512px when frame is 800px */
       aspect-ratio: 512/342;
       z-index: 10;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     @media (max-width: 768px) {
       .emulator-canvas {
-        inset: 18% 12.5% auto 12.5%;
-        width: 75%;
+        inset: 18% 15% auto 15%;
+        width: 70%;
       }
     }
 
@@ -80,7 +82,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo-light.png" alt="Stephen Barr Logo" height="40" />
+        <img src="images/logo-light.png" alt="Stephen Barr Logo" height="40" />
       </a>
       <button
         class="navbar-toggler"
@@ -112,7 +114,6 @@
   <!-- MAIN CONTENT -->
   <main class="py-5">
     <div class="container">
-      <!-- Title + Intro Copy -->
       <h1 class="section-title mb-3">Macintosh Emulator</h1>
       <p class="intro-text mb-5">
         I have a passion for presenting, and I thought it would be fun to revisit
@@ -121,28 +122,26 @@
         colleague from the now‑retired “Modern Slide” site. The site may be gone,
         but the image lives on. Enjoy!
       </p>
-  
-      <!-- Emulator Frame + Canvas -->
-      <div class="mac-frame-wrapper position-relative mx-auto">
-        <img src="images/macplus.svg" alt="Classic Macintosh Frame" class="img-fluid">
+
+      <div class="mac-frame-wrapper">
+        <img src="images/macplus.svg" alt="Classic Macintosh Frame">
         <canvas
           class="pcejs pcejs-canvas emulator-canvas"
           oncontextmenu="event.preventDefault()"
         ></canvas>
       </div>
 
-      <!-- Loading status (JS will hide this once READY) -->
-      <div class="pcejs pcejs-loading-status mt-3">Loading emulator…</div>
+      <div class="pcejs-loading-status">Loading emulator…</div>
     </div>
   </main>
 
   <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
+      <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
       <p class="mb-0">
         <a href="#" class="text-white">
-          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
+          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
         </a>
       </p>
     </div>
