@@ -123,26 +123,49 @@
   </nav>
 
   <!-- MAIN CONTENT -->
-  <main>
-    <h1 class="section-title mb-4">Macintosh Emulator</h1>
-    <p class="intro-text">
-      I have a passion for presenting, and I thought it would be fun to revisit
-      one of the earliest Mac experiences I had with presentations. I found
-      this emulator online and paired it with a graphic originally used by a
-      colleague from the now‑retired “Modern Slide” site. The site may be gone,
-      but the image lives on. Enjoy!
-    </p>
-
-    <!-- loading status -->
-    <div class="pcejs pcejs-loading-status">Loading emulator...</div>
-
-    <!-- svg frame + emulator canvas -->
-    <div class="mac-frame-wrapper">
-      <img src="images/macplus.svg" alt="Classic Macintosh Frame" />
-      <canvas
-        class="pcejs pcejs-canvas emulator-canvas"
-        oncontextmenu="event.preventDefault()"
-      ></canvas>
+  <main class="py-5">
+    <div class="container">
+      <!-- Title + Intro Copy -->
+      <h1 class="section-title mb-3">Macintosh Emulator</h1>
+      <p class="intro-text mb-5">
+        I have a passion for presenting, and I thought it would be fun to revisit
+        one of the earliest Mac experiences I had with presentations. I found
+        this emulator online and paired it with a graphic originally used by a
+        colleague from the now‑retired “Modern Slide” site. The site may be gone,
+        but the image lives on. Enjoy!
+      </p>
+  
+      <!-- Two‑Column Emulator + Controls -->
+      <div class="row align-items-start">
+        <!-- Left: The Frame + Canvas -->
+        <div class="col-md-8 mb-4 mb-md-0">
+          <div class="mac-frame-wrapper position-relative mx-auto">
+            <img src="images/macplus.svg" alt="Classic Macintosh Frame" class="img-fluid">
+            <canvas
+              class="pcejs pcejs-canvas emulator-canvas"
+              oncontextmenu="event.preventDefault()"
+            ></canvas>
+          </div>
+        </div>
+  
+        <!-- Right: Disk Selector + Buttons -->
+        <div class="col-md-4">
+          <h2 class="h5">Disk &amp; Controls</h2>
+  
+          <label for="diskSelect" class="form-label mt-3">Mount Disk Image</label>
+          <select id="diskSelect" class="form-select mb-4">
+            <option value="macplus-pcex.rom">macplus‑pcex.rom</option>
+            <option value="mac-plus.rom">mac‑plus.rom</option>
+          </select>
+  
+          <button id="resetButton" class="btn btn-outline-secondary w-100 mb-2">
+            Soft Reset
+          </button>
+          <button id="shutdownButton" class="btn btn-outline-danger w-100">
+            Shutdown
+          </button>
+        </div>
+      </div>
     </div>
   </main>
 

@@ -361,24 +361,38 @@ h1, h2, h3, h4, h5, h6 {
    11. Mac Emulator
 ==================================================== */
 
+.emu-section {
+  background-color: #f5f5f5;
+}
 .mac-frame-wrapper {
-  position: relative;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 640px;
 }
-
 .mac-frame-wrapper img {
-  width: 100%;
   display: block;
+  width: 100%;
+  height: auto;
 }
-
 .emulator-canvas {
   position: absolute;
-  top: 11.7%;
-  left: 15.1%;
-  width: 69.8%;
-  aspect-ratio: 512 / 342;
+  /* tweak these % offsets until the canvas perfectly sits in the SVG screen */
+  top: 16.2%;
+  left: 12.6%;
+  width: 75%;
+  aspect-ratio: 512 / 342; /* preserves emulator’s native aspect ratio */
   z-index: 10;
+}
+/* smaller devices */
+@media (max-width: 768px) {
+  .emulator-canvas {
+    top: 16.5%;
+    left: 12%;
+    width: 76%;
+  }
+}
+/* Controls styling */
+#diskSelect {
+  /* full width */
+  width: 100%;
 }
 /* ====================================================
    12. Legacy / Unused Components
