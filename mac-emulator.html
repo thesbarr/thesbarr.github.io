@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Macintosh Emulator | Stephen Barr</title>
+  <title>Macintosh Emulator | Stephen Barr</title>
   <meta name="description" content="A passion for presenting, explored through a nostalgic Macintosh emulator experience." />
   <link rel="icon" href="images/favicon.png" type="image/png" />
 
@@ -16,15 +16,15 @@
   <link rel="stylesheet" href="css/style.css" />
 
   <style>
-    /* page‐specific overrides */
+    /* page‑specific overrides */
     body {
       background-color: #f5f5f5;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
     }
     main {
-      padding: 4rem 1rem 2rem;
+      padding: 4rem 1rem 2rem;
       text-align: center;
     }
     .section-title {
@@ -34,16 +34,16 @@
     }
     .intro-text {
       max-width: 700px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 2rem;
       font-size: 1.1rem;
       color: #333;
     }
 
-    /* frame + canvas positioning */
+    /* -- Frame + Canvas positioning -- */
     .mac-frame-wrapper {
       position: relative;
       width: 100%;
-      max-width: 700px;
+      max-width: 800px;        /* enlarged from 700px */
       margin: 0 auto;
     }
     .mac-frame-wrapper img {
@@ -53,21 +53,20 @@
     }
     .emulator-canvas {
       position: absolute;
-      /* inset: top  right   bottom  left */
-      inset: 17.5% 13.5% auto 13.5%;
-      width: 73%;
+      /* top, right, bottom, left */
+      inset: 16.8% 13.2% auto 13.2%;
+      width: 73.6%;
       aspect-ratio: 512/342;
       z-index: 10;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     @media (max-width: 768px) {
       .emulator-canvas {
-        inset: 18.8% 12.8% auto 12.8%;
-        width: 74%;
+        inset: 18% 12.5% auto 12.5%;
+        width: 75%;
       }
     }
 
-    /* emulator loading text */
     .pcejs-loading-status {
       color: #999;
       font-size: 1rem;
@@ -81,7 +80,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo-light.png" alt="Stephen Barr Logo" height="40" />
+        <img src="images/logo-light.png" alt="Stephen Barr Logo" height="40" />
       </a>
       <button
         class="navbar-toggler"
@@ -94,28 +93,16 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="index.html"
-              >Home</a
-            >
+            <a class="nav-link nav-link-bold nav-hover-gold" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link nav-link-bold nav-hover-gold"
-              href="experience.html"
-              >Experience</a
-            >
+            <a class="nav-link nav-link-bold nav-hover-gold" href="experience.html">Experience</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link nav-link-bold nav-hover-gold active"
-              href="beyond-the-desk.html"
-              >Beyond the Desk</a
-            >
+            <a class="nav-link nav-link-bold nav-hover-gold active" href="beyond-the-desk.html">Beyond the Desk</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-bold nav-hover-gold" href="contact.html"
-              >Contact</a
-            >
+            <a class="nav-link nav-link-bold nav-hover-gold" href="contact.html">Contact</a>
           </li>
         </ul>
       </div>
@@ -135,48 +122,28 @@
         but the image lives on. Enjoy!
       </p>
   
-      <!-- Two‑Column Emulator + Controls -->
-      <div class="row align-items-start">
-        <!-- Left: The Frame + Canvas -->
-        <div class="col-md-8 mb-4 mb-md-0">
-          <div class="mac-frame-wrapper position-relative mx-auto">
-            <img src="images/macplus.svg" alt="Classic Macintosh Frame" class="img-fluid">
-            <canvas
-              class="pcejs pcejs-canvas emulator-canvas"
-              oncontextmenu="event.preventDefault()"
-            ></canvas>
-          </div>
-        </div>
-  
-        <!-- Right: Disk Selector + Buttons -->
-        <div class="col-md-4">
-          <h2 class="h5">Disk &amp; Controls</h2>
-  
-          <label for="diskSelect" class="form-label mt-3">Mount Disk Image</label>
-          <select id="diskSelect" class="form-select mb-4">
-            <option value="macplus-pcex.rom">macplus‑pcex.rom</option>
-            <option value="mac-plus.rom">mac‑plus.rom</option>
-          </select>
-  
-          <button id="resetButton" class="btn btn-outline-secondary w-100 mb-2">
-            Soft Reset
-          </button>
-          <button id="shutdownButton" class="btn btn-outline-danger w-100">
-            Shutdown
-          </button>
-        </div>
+      <!-- Emulator Frame + Canvas -->
+      <div class="mac-frame-wrapper position-relative mx-auto">
+        <img src="images/macplus.svg" alt="Classic Macintosh Frame" class="img-fluid">
+        <canvas
+          class="pcejs pcejs-canvas emulator-canvas"
+          oncontextmenu="event.preventDefault()"
+        ></canvas>
       </div>
+
+      <!-- Loading status (JS will hide this once READY) -->
+      <div class="pcejs pcejs-loading-status mt-3">Loading emulator…</div>
     </div>
   </main>
 
   <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-4">
     <div class="container">
-      <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
+      <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
       <p class="mb-0">
-        <a href="#" class="text-white"
-          >I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION</a
-        >
+        <a href="#" class="text-white">
+          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
+        </a>
       </p>
     </div>
   </footer>
