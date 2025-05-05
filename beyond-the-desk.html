@@ -308,7 +308,7 @@
           <p class="mb-0">Professional Presentations Given</p>
         </div>
         <div class="col-md-3 mb-4">
-          <h1 class="display-3 fw-bold text-white" style="color: #fff !important;" data-countto="$500,000">0</h1>
+          <h1 class="display-3 fw-bold text-white" style="color: #fff !important;" data-countto="500000">0</h1>
           <p class="mb-0">Grant Dollars Awarded</p>
         </div>
         <div class="col-md-3 mb-4">
@@ -398,36 +398,50 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
   </script>
 
-  <!-- Example: a simple jQuery-based approach for counters -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // 1) Calculate days since Jan 5, 2015
-      const startDate = new Date('2015-01-05');
-      const diffDays = Math.floor((Date.now() - startDate) / (1000*60*60*24));
-
-      // 2) Insert that into #vcuDays data-countto
-      const daysElem = document.getElementById('vcuDays');
-      daysElem.setAttribute('data-countto', diffDays);
-
-      // 3) If jQuery is present, do a simple from-0-to-final animation
-      if (typeof $ !== 'undefined') {
-        $('[data-countto]').each(function(){
-          const $this = $(this);
-          const target = parseInt($this.attr('data-countto'), 10) || 0;
-          let current = 0;
-          const increment = Math.ceil(target / 100);
-
-          const timer = setInterval(() => {
-            current += increment;
-            if(current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            $this.text(current);
-          }, 20);
-        });
-      }
-    });
+<!-- Example: a simple jQuery-based approach for counters -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // 1) Calculate days since Jan 5, 2015
+    const startDate = new Date('2015-01-05');
+    const diffDays  = Math.floor((Date.now() - startDate) / (1000*60*60*24));
+  
+    // 2) Inject that into #vcuDays
+    const daysElem = document.getElementById('vcuDays');
+    daysElem.setAttribute('data-countto', diffDays);
+  
+    // 3) Counter + currency formatter
+    if (typeof $ !== 'undefined') {
+      // prepare a USD formatter
+      const usdFmt = new Intl.NumberFormat('en-US', {
+        style:              'currency',
+        currency:           'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+      });
+  
+      $('[data-countto]').each(function(){
+        const $el     = $(this);
+        const raw     = $el.attr('data-countto') || '0';
+        const target  = parseInt(raw.replace(/[^0-9]/g,''), 10) || 0;
+        let   current = 0;
+        const step    = Math.ceil(target / 100);
+  
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          // detect if this one wants currency (has “$” in original attr)
+          if (raw.trim().startsWith('$')) {
+            $el.text( usdFmt.format(current) );
+          } else {
+            $el.text(current);
+          }
+        }, 20);
+      });
+    }
+  });
   </script>
 
 </body>
