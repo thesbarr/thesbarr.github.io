@@ -9,7 +9,10 @@ permalink: /404.html
 
 <section class="notfound-container">
   <div class="notfound-content">
-    <img src="{{ '/images/404.jpg' | relative_url }}" alt="404 Not Found" />
+    <picture>
+      <source type="image/webp" srcset="{{ '/images/404.webp' | relative_url }}" />
+      <img src="{{ '/images/404.jpg' | relative_url }}" alt="404 Not Found" loading="lazy" decoding="async" width="1900" height="1266" />
+    </picture>
     <h1>Oops! Page Not Found</h1>
     <p>Looks like this page drifted off into space. Let's get you back on track.</p>
     <a href="{{ '/' | relative_url }}" class="btn">Return Home</a>

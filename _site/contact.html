@@ -21,13 +21,14 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body class="site-body contact-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img src="/images/logo-light.png" alt="Stephen Barr Logo" height="40" />
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -57,7 +58,7 @@
 
   
 
-  <main class="site-main">
+  <main id="main-content" class="site-main">
     <section class="contact-section py-5">
   <div class="container">
     <div class="row justify-content-center">
@@ -111,11 +112,15 @@
     <footer class="bg-dark text-white py-4">
   <div class="container text-center">
     <p class="mb-1">&copy; 2026 Stephen Barr. All rights reserved.</p>
-    <p class="mb-0">
-      <a href="#" class="text-white">
-        I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
-      </a>
+    <p class="mb-2 footer-heart">
+      I
+      <button class="heart-toggle" type="button" aria-expanded="false" aria-controls="heart-note">
+        <i class="fa fa-heart text-danger"></i>
+        <span class="visually-hidden">Show a note</span>
+      </button>
+      HIGHER EDUCATION
     </p>
+    <div id="heart-note" class="heart-note" role="status" aria-live="polite"></div>
   </div>
 </footer>
 
@@ -134,5 +139,37 @@
       gtag('config', 'G-V745RLVFR1');
     </script>
   
+  <script>
+    (function () {
+      var toggle = document.querySelector('.heart-toggle');
+      var note = document.getElementById('heart-note');
+      if (!toggle || !note) {
+        return;
+      }
+
+      var notes = [
+        'Students first, always.',
+        'Every day is move-in day.',
+        'Campus energy is the best energy.',
+        'Service is the strategy.',
+        'Moments matter in higher ed.',
+        'Built for students, powered by people.'
+      ];
+
+      var index = 0;
+      toggle.addEventListener('click', function () {
+        note.textContent = notes[index % notes.length];
+        index += 1;
+        toggle.setAttribute('aria-expanded', 'true');
+        note.classList.add('is-visible');
+
+        clearTimeout(note._timeoutId);
+        note._timeoutId = setTimeout(function () {
+          note.classList.remove('is-visible');
+          toggle.setAttribute('aria-expanded', 'false');
+        }, 3000);
+      });
+    })();
+  </script>
 </body>
 </html>

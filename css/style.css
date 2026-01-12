@@ -61,6 +61,32 @@ a {
   transition: all 0.3s ease;
 }
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--vcu-gold);
+  outline-offset: 3px;
+}
+
+/* Accessible skip link */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75rem 1.25rem;
+  background-color: #101820;
+  color: #fff;
+  transform: translateY(-120%);
+  transition: transform 0.2s ease;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -124,66 +150,136 @@ h1, h2, h3, h4, h5, h6 {
 /* ====================================================
    5. Hero Banner
 ==================================================== */
-.hero {
-  background: linear-gradient(to right, #101820 30%, #fff 30%);
-  color: #fff;
-  padding: 6rem 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.hero-text {
-  max-width: 600px;
-  color: #fff;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero h1 .gold {
-  color: var(--vcu-gold);
-}
-
-.hero p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.hero .btn-primary {
-  background-color: var(--vcu-gold);
-  color: #000;
-  font-weight: 600;
-  border: none;
-}
-
-.hero .btn-primary:hover {
-  background-color: #e6a700;
-  color: #000;
-}
-
-.hero-image {
-  background: url("../images/SBarr-Headshot-Web.jpg") center center/cover no-repeat;
-  height: 87vh;
-  position: relative;
-}
 
 .home-page .site-main {
   display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.home-page .hero-image {
+.home-hero {
   flex: 1;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-split {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+  min-height: 100%;
+}
+
+.hero-panel {
+  background: linear-gradient(140deg, rgba(16, 24, 32, 0.98) 0%, rgba(16, 24, 32, 0.9) 60%, rgba(16, 24, 32, 0.82) 100%);
+  color: #fff;
+  padding: clamp(2rem, 3.5vw, 3.5rem) clamp(2rem, 4vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-photo {
+  background-image: url("../images/SBarr-Headshot-VCU.jpg");
+  background-image: image-set(
+    url("../images/SBarr-Headshot-VCU.webp") type("image/webp"),
+    url("../images/SBarr-Headshot-VCU.jpg") type("image/jpeg")
+  );
+  background-position: 50% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100%;
+}
+
+.hero-eyebrow {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  color: #f8b800;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 3.2vw, 3.4rem);
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 1.75rem;
+}
+
+.hero-actions .btn-primary {
+  background-color: #f8b800;
+  border: none;
+  color: #101820;
+  font-weight: 600;
+}
+
+.hero-actions .btn-primary:hover,
+.hero-actions .btn-primary:focus {
+  background-color: #e0a700;
+  color: #101820;
+}
+
+
+.hero-quote {
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #f8b800;
+  padding: 1.25rem 1.5rem;
+  margin: clamp(1.2rem, 2vw, 1.75rem) 0 0;
+  max-width: 420px;
+}
+
+.hero-quote p {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+}
+
+.hero-quote cite {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  display: block;
 }
 
 @media (max-width: 768px) {
-  .hero-image {
-    height: 40vh;
+  .home-hero {
+    min-height: auto;
+  }
+
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-bottom: 0;
+  }
+
+  .hero-panel {
+    padding: 3rem 1.75rem;
+  }
+
+  .hero-photo {
+    min-height: 45vh;
+    background-position: 50% 15%;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-quote {
+    max-width: 100%;
   }
 }
 
@@ -260,7 +356,7 @@ h1, h2, h3, h4, h5, h6 {
    About Page
 ==================================================== */
 .about-section {
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 3rem;
   background-color: #f8f8f8;
 }
 
@@ -282,6 +378,10 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   border-radius: 0.5rem;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-page .site-main {
+  background-color: #f8f8f8;
 }
 
 /* ====================================================
@@ -312,12 +412,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .counter-overlay {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("../images/bg/brick.jpg") center center/cover no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../images/bg/brick.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    image-set(
+      url("../images/bg/brick.webp") type("image/webp"),
+      url("../images/bg/brick.jpg") type("image/jpeg")
+    );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .presentations-section {
-  background: url("../images/projector.png") center center/cover no-repeat;
+  background-image: url("../images/projector.png");
+  background-image: image-set(
+    url("../images/projector.webp") type("image/webp"),
+    url("../images/projector.png") type("image/png")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .section-title span {
@@ -350,7 +465,14 @@ h1, h2, h3, h4, h5, h6 {
    8. Contact Page
 ==================================================== */
 .contact-page .site-main {
-  background: url("../images/Contact_Background.jpg") center center/cover no-repeat;
+  background-image: url("../images/Contact_Background.jpg");
+  background-image: image-set(
+    url("../images/Contact_Background.webp") type("image/webp"),
+    url("../images/Contact_Background.jpg") type("image/jpeg")
+  );
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
 }
@@ -403,6 +525,48 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer a:hover {
   color: #fff;
+}
+
+.footer-heart {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+.heart-toggle {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.heart-toggle .fa-heart {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.heart-toggle:focus-visible .fa-heart,
+.heart-toggle:hover .fa-heart {
+  transform: scale(1.1);
+}
+
+.heart-note {
+  margin: 0.5rem auto 0;
+  max-width: 520px;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.heart-note.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ====================================================

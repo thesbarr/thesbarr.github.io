@@ -21,12 +21,16 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body class="site-body notfound-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   
 
-  <main class="site-main">
+  <main id="main-content" class="site-main">
     <section class="notfound-container">
   <div class="notfound-content">
-    <img src="/images/404.jpg" alt="404 Not Found" />
+    <picture>
+      <source type="image/webp" srcset="/images/404.webp" />
+      <img src="/images/404.jpg" alt="404 Not Found" loading="lazy" decoding="async" width="1900" height="1266" />
+    </picture>
     <h1>Oops! Page Not Found</h1>
     <p>Looks like this page drifted off into space. Let's get you back on track.</p>
     <a href="/" class="btn">Return Home</a>
@@ -39,11 +43,15 @@
     <footer class="bg-dark text-white py-4">
   <div class="container text-center">
     <p class="mb-1">&copy; 2026 Stephen Barr. All rights reserved.</p>
-    <p class="mb-0">
-      <a href="#" class="text-white">
-        I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
-      </a>
+    <p class="mb-2 footer-heart">
+      I
+      <button class="heart-toggle" type="button" aria-expanded="false" aria-controls="heart-note">
+        <i class="fa fa-heart text-danger"></i>
+        <span class="visually-hidden">Show a note</span>
+      </button>
+      HIGHER EDUCATION
     </p>
+    <div id="heart-note" class="heart-note" role="status" aria-live="polite"></div>
   </div>
 </footer>
 
@@ -62,5 +70,37 @@
       gtag('config', 'G-V745RLVFR1');
     </script>
   
+  <script>
+    (function () {
+      var toggle = document.querySelector('.heart-toggle');
+      var note = document.getElementById('heart-note');
+      if (!toggle || !note) {
+        return;
+      }
+
+      var notes = [
+        'Students first, always.',
+        'Every day is move-in day.',
+        'Campus energy is the best energy.',
+        'Service is the strategy.',
+        'Moments matter in higher ed.',
+        'Built for students, powered by people.'
+      ];
+
+      var index = 0;
+      toggle.addEventListener('click', function () {
+        note.textContent = notes[index % notes.length];
+        index += 1;
+        toggle.setAttribute('aria-expanded', 'true');
+        note.classList.add('is-visible');
+
+        clearTimeout(note._timeoutId);
+        note._timeoutId = setTimeout(function () {
+          note.classList.remove('is-visible');
+          toggle.setAttribute('aria-expanded', 'false');
+        }, 3000);
+      });
+    })();
+  </script>
 </body>
 </html>

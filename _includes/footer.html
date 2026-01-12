@@ -1,10 +1,14 @@
 <footer class="bg-dark text-white py-4">
   <div class="container text-center">
     <p class="mb-1">&copy; 2026 Stephen Barr. All rights reserved.</p>
-    <p class="mb-0">
-      <a href="#" class="text-white">
-        I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
-      </a>
+    <p class="mb-2 footer-heart">
+      I
+      <button class="heart-toggle" type="button" aria-expanded="false" aria-controls="heart-note">
+        <i class="fa fa-heart text-danger"></i>
+        <span class="visually-hidden">Show a note</span>
+      </button>
+      HIGHER EDUCATION
     </p>
+    <div id="heart-note" class="heart-note" role="status" aria-live="polite"></div>
   </div>
 </footer>

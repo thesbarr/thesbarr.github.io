@@ -23,11 +23,12 @@
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}" />
 </head>
 <body class="site-body{% if page.body_class %} {{ page.body_class }}{% endif %}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   {% unless page.hide_nav %}
     {% include nav.html %}
   {% endunless %}
 
-  <main class="site-main">
+  <main id="main-content" class="site-main">
     {{ content }}
   </main>
 
@@ -52,5 +53,37 @@
       gtag('config', '{{ site.google_analytics }}');
     </script>
   {% endif %}
+  <script>
+    (function () {
+      var toggle = document.querySelector('.heart-toggle');
+      var note = document.getElementById('heart-note');
+      if (!toggle || !note) {
+        return;
+      }
+
+      var notes = [
+        'Students first, always.',
+        'Every day is move-in day.',
+        'Campus energy is the best energy.',
+        'Service is the strategy.',
+        'Moments matter in higher ed.',
+        'Built for students, powered by people.'
+      ];
+
+      var index = 0;
+      toggle.addEventListener('click', function () {
+        note.textContent = notes[index % notes.length];
+        index += 1;
+        toggle.setAttribute('aria-expanded', 'true');
+        note.classList.add('is-visible');
+
+        clearTimeout(note._timeoutId);
+        note._timeoutId = setTimeout(function () {
+          note.classList.remove('is-visible');
+          toggle.setAttribute('aria-expanded', 'false');
+        }, 3000);
+      });
+    })();
+  </script>
 </body>
 </html>
