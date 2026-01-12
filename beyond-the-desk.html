@@ -1,468 +1,276 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Beyond the Desk - Stephen Barr" />
-  <meta name="author" content="stephenabarr.com" />
-  <title>Beyond the Desk</title>
+---
+layout: default
+title: Beyond the Desk | Stephen Barr
+description: Leadership, impact, and a little something extra from Stephen Barr.
+body_class: beyond-page
+---
 
-  <!-- Bootstrap 5 (CDN, no SRI) -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  />
-
-  <!-- Font Awesome, local CSS, etc. -->
-  <link rel="stylesheet" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <style>
-    .hover-animate {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .hover-animate:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
-    }
-    .card .card-title {
-      font-weight: bold;
-      color: #000;
-    }
-    .card {
-      margin: 1rem;
-    }
-    .counter-overlay {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-                  url("images/bg/brick.jpg") center center/cover no-repeat;
-    }
-  </style>
-
-  <script src="js/jquery.min.js"></script>
-</head>
-<body>
-
-<!-- ===== NAVBAR ===== -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<section class="beyond-section py-5 bg-light">
   <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <img src="images/logo-light.png" alt="Stephen Barr Logo" height="40" />
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link nav-link-bold nav-hover-gold" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-bold nav-hover-gold" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-bold nav-hover-gold" href="experience.html">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-bold nav-hover-gold active" href="beyond-the-desk.html">Beyond the Desk</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-bold nav-hover-gold" href="mac-emulator.html">Emulator</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link nav-link-bold nav-hover-gold" href="contact.html">Contact</a>
-        </li>
+    <h2 class="section-title text-center mb-2">Beyond the Desk</h2>
+    <p class="text-muted text-center mb-5">Leadership, impact, and a little something extra</p>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center justify-content-center gx-4 gy-5">
+      <div class="col-md-6 col-lg-4">
+        <a href="https://nacas.org/about/regions/nacas-east/" class="text-decoration-none" target="_blank" rel="noopener">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-board.jpg' | relative_url }}" class="card-img-top" alt="NACAS East Board" />
+            <div class="card-body text-center">
+              <h5 class="card-title">NACAS East Board</h5>
+              <p class="card-text mb-0">NACAS East Board President, 2021–2022</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ '/images/doc/beyond-katrina-doc.pdf' | relative_url }}" class="text-decoration-none">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-katrina.jpg' | relative_url }}" class="card-img-top" alt="Katrina Hospital" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Hurricane Katrina Response</h5>
+              <p class="card-text mb-0">Led logistics for a field hospital at LSU during Hurricane Katrina.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ '/images/video/VCU Dine Food Truck Fest 2019.mp4' | relative_url }}" class="text-decoration-none">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-foodtruck.png' | relative_url }}" class="card-img-top" alt="Food Truck Festival" />
+            <div class="card-body text-center">
+              <h5 class="card-title">VCU Food Truck Festival</h5>
+              <p class="card-text mb-0">Engaging students through food and fun on campus.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ '/images/doc/BarrLetterOfAppreciation.pdf' | relative_url }}" class="text-decoration-none">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-letter.png' | relative_url }}" class="card-img-top" alt="Letter of Appreciation" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Letter of Appreciation</h5>
+              <p class="card-text mb-0">Recognition for impactful contributions and service.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="https://nacas.org/member-benefits/casp/" class="text-decoration-none" target="_blank" rel="noopener">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-casp.jpg' | relative_url }}" class="card-img-top" alt="CASP Accreditation" />
+            <div class="card-body text-center">
+              <h5 class="card-title">CASP Accreditation</h5>
+              <p class="card-text mb-0">Certified Auxiliary Services Professional. A nationally recognized credential.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="https://youtu.be/WX6vioW7SZc" class="text-decoration-none" target="_blank" rel="noopener">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-super.jpg' | relative_url }}" class="card-img-top" alt="Super Bowl XXXVIII" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Super Bowl XXXVIII</h5>
+              <p class="card-text mb-0">Served as crew chief for game operations and logistics.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ '/images/doc/beyond-teamplayer.pdf' | relative_url }}" class="text-decoration-none">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-awards.png' | relative_url }}" class="card-img-top" alt="Team Player" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Team Player Recognition</h5>
+              <p class="card-text mb-0">Acknowledged as a collaborative leader in campus services.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ '/images/video/Grocery.mp4' | relative_url }}" class="text-decoration-none">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/beyond-grocery.jpg' | relative_url }}" class="card-img-top" alt="Grocery Store" />
+            <div class="card-body text-center">
+              <h5 class="card-title">VCU Grocery Store</h5>
+              <p class="card-text mb-0">Helped launch VCU’s first on-campus grocery store.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger" class="text-decoration-none" target="_blank" rel="noopener">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/LRP - BSV.png' | relative_url }}" class="card-img-top" alt="Little Ram Pantry" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Little Ram Pantry</h5>
+              <p class="card-text mb-0">Partnered to address food insecurity for students at VCU.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="{{ '/images/doc/PRSA - Warner Letter.pdf' | relative_url }}" class="text-decoration-none">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/PRSA - Warner Letter.jpg' | relative_url }}" class="card-img-top" alt="Senator Warner Letter" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Senator Warner Letter</h5>
+              <p class="card-text mb-0">Commendation from U.S. Senator Mark Warner for our awards.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="https://news.vcu.edu/article/2025/04/dining-services-has-a-full-menu-of-projects-focused-on-sustainability" class="text-decoration-none" target="_blank" rel="noopener">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/sustainability.png' | relative_url }}" class="card-img-top" alt="VCU Dining sustainability projects" />
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">Dining Services Sustainability</h5>
+              <p class="card-text flex-grow-1">
+                From simple composting to high-tech food-waste tracking, see how VCU Dining is refining its recipe for a greener campus.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="https://youtu.be/d5-8ZQ1isIg?si=X9mPug60js3Qr26H" class="text-decoration-none" target="_blank" rel="noopener">
+          <div class="card h-100 hover-animate">
+            <img src="{{ '/images/case-studies/FCSI.png' | relative_url }}" class="card-img-top" alt="VCU Dining - The Art of Culinary Spaces Podcast" />
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">VCU Dining - The Art of Culinary Spaces Podcast</h5>
+              <p class="card-text flex-grow-1">
+                In an urban campus setting where transactional dining had become the norm, VCU recognized students needed more than just convenient meal options: they needed spaces that foster genuine community and combat the isolation of screen-focused living.
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
-</nav>
+</section>
 
-
-  <!-- ===== A Little Something Extra ===== -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="section-title text-center mb-2">Beyond the Desk</h2>
-<p class="text-muted text-center mb-5">Leadership, impact, and a little something extra</p>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center justify-content-center gx-4 gy-5">
-
-        <!-- NACAS East Board -->
-        <div class="col-md-6 col-lg-4">
-          <a href="https://nacas.org/about/regions/nacas-east/" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-board.jpg"
-                class="card-img-top"
-                alt="NACAS East Board"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">NACAS East Board</h5>
-                <p class="card-text mb-0">
-                  NACAS East Board President, 2021–2022
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Hurricane Katrina Response -->
-        <div class="col-md-6 col-lg-4">
-          <a href="images/doc/beyond-katrina-doc.pdf" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-katrina.jpg"
-                class="card-img-top"
-                alt="Katrina Hospital"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">Hurricane Katrina Response</h5>
-                <p class="card-text mb-0">
-                  Led logistics for a field hospital at LSU during Hurricane Katrina.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- VCU Food Truck Festival -->
-        <div class="col-md-6 col-lg-4">
-          <a href="images/video/VCU Dine Food Truck Fest 2019.mp4" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-foodtruck.png"
-                class="card-img-top"
-                alt="Food Truck Festival"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">VCU Food Truck Festival</h5>
-                <p class="card-text mb-0">
-                  Engaging students through food and fun on campus.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Letter of Appreciation -->
-        <div class="col-md-6 col-lg-4">
-          <a href="images/doc/BarrLetterOfAppreciation.pdf" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-letter.png"
-                class="card-img-top"
-                alt="Letter of Appreciation"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">Letter of Appreciation</h5>
-                <p class="card-text mb-0">
-                  Recognition for impactful contributions and service.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- CASP Accreditation -->
-        <div class="col-md-6 col-lg-4">
-          <a href="https://nacas.org/member-benefits/casp/" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-casp.jpg"
-                class="card-img-top"
-                alt="CASP Accreditation"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">CASP Accreditation</h5>
-                <p class="card-text mb-0">
-                  Certified Auxiliary Services Professional. A nationally recognized credential.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Super Bowl XXXVIII -->
-        <div class="col-md-6 col-lg-4">
-          <a href="https://youtu.be/WX6vioW7SZc" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-super.jpg"
-                class="card-img-top"
-                alt="Super Bowl XXXVIII"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">Super Bowl XXXVIII</h5>
-                <p class="card-text mb-0">
-                  Served as crew chief for game operations and logistics.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Team Player Recognition -->
-        <div class="col-md-6 col-lg-4">
-          <a href="images/doc/beyond-teamplayer.pdf" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-awards.png"
-                class="card-img-top"
-                alt="Team Player"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">Team Player Recognition</h5>
-                <p class="card-text mb-0">
-                  Acknowledged as a collaborative leader in campus services.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- VCU Grocery Store -->
-        <div class="col-md-6 col-lg-4">
-          <a href="images/video/Grocery.mp4" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/beyond-grocery.jpg"
-                class="card-img-top"
-                alt="Grocery Store"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">VCU Grocery Store</h5>
-                <p class="card-text mb-0">
-                  Helped launch VCU’s first on-campus grocery store.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Little Ram Pantry -->
-        <div class="col-md-6 col-lg-4">
-          <a
-            href="https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger"
-            class="text-decoration-none"
-          >
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/LRP - BSV.png"
-                class="card-img-top"
-                alt="Little Ram Pantry"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">Little Ram Pantry</h5>
-                <p class="card-text mb-0">
-                  Partnered to address food insecurity for students at VCU.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- Senator Warner Letter -->
-        <div class="col-md-6 col-lg-4">
-          <a href="images/doc/PRSA - Warner Letter.pdf" class="text-decoration-none">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/PRSA - Warner Letter.jpg"
-                class="card-img-top"
-                alt="Senator Warner Letter"
-              >
-              <div class="card-body text-center">
-                <h5 class="card-title">Senator Warner Letter</h5>
-                <p class="card-text mb-0">
-                  Commendation from U.S. Senator Mark Warner for our awards.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <!-- Dining Services Sustainability -->
-        <div class="col-md-6 col-lg-4">
-          <a href="https://news.vcu.edu/article/2025/04/dining-services-has-a-full-menu-of-projects-focused-on-sustainability"
-             class="text-decoration-none" target="_blank" rel="noopener">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/sustainability.png"
-                class="card-img-top"
-                alt="VCU Dining sustainability projects"
-              >
-              <div class="card-body text-center d-flex flex-column">
-                <h5 class="card-title">Dining Services Sustainability</h5>
-                <p class="card-text flex-grow-1">
-                  From simple composting to high-tech food-waste tracking, see how VCU Dining is refining its recipe for a greener campus.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-<!-- Dining Services Sustainability -->
-        <div class="col-md-6 col-lg-4">
-          <a href="https://youtu.be/d5-8ZQ1isIg?si=X9mPug60js3Qr26H"
-             class="text-decoration-none" target="_blank" rel="noopener">
-            <div class="card h-100 hover-animate">
-              <img
-                src="images/case-studies/FCSI.png"
-                class="card-img-top"
-                alt="VCU Dining - The Art of Culinary Spaces Podcast"
-              >
-              <div class="card-body text-center d-flex flex-column">
-                <h5 class="card-title">VCU Dining - The Art of Culinary Spaces Podcast</h5>
-                <p class="card-text flex-grow-1">
-                  In an urban campus setting where transactional dining had become the norm, VCU recognized students needed more than just convenient meal options: they needed spaces that foster genuine community and combat the isolation of screen-focused living.                </p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-      </div> <!-- row -->
-    </div> <!-- container -->
-  </section>
-
-  <!-- ===== COUNTER SECTION ===== -->
-  <section class="py-5 text-white text-center counter-overlay">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 mb-4">
-          <h1 class="display-3 fw-bold text-white" style="color: #fff !important;" data-countto="25">0</h1>
-          <p class="mb-0">Professional Presentations Given</p>
-        </div>
-        <div class="col-md-3 mb-4">
-          <h1 class="display-3 fw-bold text-white" style="color: #fff !important;" data-countto="$500,000">0</h1>
-          <p class="mb-0">Grant Dollars Awarded</p>
-        </div>
-        <div class="col-md-3 mb-4">
-          <h1 class="display-3 fw-bold text-white" style="color: #fff !important;" data-countto="29,288">0</h1>
-          <p class="mb-0">VCU Enrollment</p>
-        </div>
-        <div class="col-md-3 mb-4">
-          <h1 id="vcuDays" class="display-3 fw-bold text-white" style="color: #fff !important;" data-countto="0">0</h1>
-          <p class="mb-0">Days on the Job at VCU (And Counting)</p>
-        </div>
+<section class="py-5 text-white text-center counter-overlay">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <h1 class="display-3 fw-bold text-white" data-countto="25">0</h1>
+        <p class="mb-0">Professional Presentations Given</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h1 class="display-3 fw-bold text-white" data-countto="$500,000">0</h1>
+        <p class="mb-0">Grant Dollars Awarded</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h1 class="display-3 fw-bold text-white" data-countto="29,288">0</h1>
+        <p class="mb-0">VCU Enrollment</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <h1 id="vcuDays" class="display-3 fw-bold text-white" data-countto="0">0</h1>
+        <p class="mb-0">Days on the Job at VCU (And Counting)</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ===== SELECTED PRESENTATIONS ===== -->
-  <section 
-  class="py-5 text-dark"
-  style="background: url('images/projector.png') center center/cover no-repeat;"
->
+<section class="py-5 text-dark presentations-section">
   <div class="container">
-
-    <!-- Main heading -->
     <h2 class="font-weight-bold mb-5 text-center">Selected Presentations</h2>
 
-          <!-- Category #1 -->
-          <div class="mb-4">
-            <h4 class="fw-bold">Recent Events (2023–2024)</h4>
-            <ul>
-              <li>NACAS C3X 2025 – Enhancing Student Engagement in Food Services with Technology and Fun - Part 2</li>
-              <li>SACUBO Fall Workshop 2024 – Retaining Your Finance Workforce</li>
-              <li>NACAS C3X 2024 – Enhancing Student Engagement in Food Services with Technology and Fun</li>
-              <li>NACAS C3X 2023 – Empowering Auxiliary Officers to be More Engaged in Campus Edge Projects (Panel Discussion)</li>
-              <li>NACAS East/Central CX 2023 – Makin' Groceries: A look into VCU's new grocery store!</li>
-            </ul>
-          </div>
-
-          <!-- Category #2 -->
-          <div class="mb-4">
-            <h4 class="fw-bold">Virtual & Leadership Forums</h4>
-            <ul>
-              <li>NACAS Virtual Leadership Forum 2020 – Leveraging Auxiliaries to Mitigate Campus Enrollment Challenges</li>
-              <li>NACAS Senior Leadership Institute 2018 – General Session: Creative Presentations That Captivate</li>
-            </ul>
-          </div>
-
-          <!-- Category #3 -->
-          <div class="mb-4">
-            <h4 class="fw-bold">Creative & Campus Engagement</h4>
-            <ul>
-              <li>NACAS 2019 / NACAS East CX 2019 – How VCU Captured Bigfoot</li>
-              <li>VCU School of Medicine 2019 – Creative Presentations That Captivate, Inform, and Inspire</li>
-              <li>NACAS East CX 2018 – Virtual Reality Campus Services</li>
-              <li>NACAS East 2017 – Celebrating Chinese New Year at VCU</li>
-              <li>VCU School of Medicine 2017 – Now Presenting: Creative Presentations</li>
-            </ul>
-          </div>
-
-          <!-- Category #4 -->
-          <div class="mb-4">
-            <h4 class="fw-bold">Earlier Works</h4>
-            <ul>
-              <li>NACAS 2016 – Biometrics Offer Better Student Living</li>
-              <li>NACAS 2015 – RamTech @ VCU</li>
-              <li>Blackboard Spring Training 2014 – Modernizing Campus Concessions POS</li>
-              <li>NACAS 2013 – Modernizing Campus Concessions POS</li>
-              <li>NACCU 2012 – Wired to Wireless</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <div class="mb-4">
+      <h4 class="fw-bold">Recent Events (2023–2024)</h4>
+      <ul>
+        <li>NACAS C3X 2025 – Enhancing Student Engagement in Food Services with Technology and Fun - Part 2</li>
+        <li>SACUBO Fall Workshop 2024 – Retaining Your Finance Workforce</li>
+        <li>NACAS C3X 2024 – Enhancing Student Engagement in Food Services with Technology and Fun</li>
+        <li>NACAS C3X 2023 – Empowering Auxiliary Officers to be More Engaged in Campus Edge Projects (Panel Discussion)</li>
+        <li>NACAS East/Central CX 2023 – Makin' Groceries: A look into VCU's new grocery store!</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="bg-dark text-white text-center py-4">
-    <div class="container">
-      <p class="mb-1">&copy; 2025 Stephen Barr. All rights reserved.</p>
-      <p class="mb-0">
-        <a href="#" class="text-white">
-          I <i class="fa fa-heart text-danger"></i> HIGHER EDUCATION
-        </a>
-      </p>
+    <div class="mb-4">
+      <h4 class="fw-bold">Virtual & Leadership Forums</h4>
+      <ul>
+        <li>NACAS Virtual Leadership Forum 2020 – Leveraging Auxiliaries to Mitigate Campus Enrollment Challenges</li>
+        <li>NACAS Senior Leadership Institute 2018 – General Session: Creative Presentations That Captivate</li>
+      </ul>
     </div>
-  </footer>
 
-  <!-- ===== BOOTSTRAP 5 JS BUNDLE (INCLUDES POPPER) ===== -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
-  </script>
+    <div class="mb-4">
+      <h4 class="fw-bold">Creative & Campus Engagement</h4>
+      <ul>
+        <li>NACAS 2019 / NACAS East CX 2019 – How VCU Captured Bigfoot</li>
+        <li>VCU School of Medicine 2019 – Creative Presentations That Captivate, Inform, and Inspire</li>
+        <li>NACAS East CX 2018 – Virtual Reality Campus Services</li>
+        <li>NACAS East 2017 – Celebrating Chinese New Year at VCU</li>
+        <li>VCU School of Medicine 2017 – Now Presenting: Creative Presentations</li>
+      </ul>
+    </div>
 
-<!-- Example: a simple jQuery-based approach for counters -->
+    <div class="mb-4">
+      <h4 class="fw-bold">Earlier Works</h4>
+      <ul>
+        <li>NACAS 2016 – Biometrics Offer Better Student Living</li>
+        <li>NACAS 2015 – RamTech @ VCU</li>
+        <li>Blackboard Spring Training 2014 – Modernizing Campus Concessions POS</li>
+        <li>NACAS 2013 – Modernizing Campus Concessions POS</li>
+        <li>NACCU 2012 – Wired to Wireless</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // 1) Calculate days since Jan 5, 2015
-    const startDate = new Date('2015-01-05');
-    const diffDays  = Math.floor((Date.now() - startDate) / (1000*60*60*24));
-  
-    // 2) Inject that into #vcuDays
-    const daysElem = document.getElementById('vcuDays');
-    daysElem.setAttribute('data-countto', diffDays);
-  
-    // 3) Counter + currency formatter
-    if (typeof $ !== 'undefined') {
-      // prepare a USD formatter
-      const usdFmt = new Intl.NumberFormat('en-US', {
-        style:              'currency',
-        currency:           'USD',
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 0
-      });
-  
-      $('[data-countto]').each(function(){
-        const $el     = $(this);
-        const raw     = $el.attr('data-countto') || '0';
-        const target  = parseInt(raw.replace(/[^0-9]/g,''), 10) || 0;
-        let   current = 0;
-        const step    = Math.ceil(target / 100);
-  
-        const timer = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            current = target;
-            clearInterval(timer);
-          }
-          // detect if this one wants currency (has “$” in original attr)
-          if (raw.trim().startsWith('$')) {
-            $el.text( usdFmt.format(current) );
-          } else {
-            $el.text(current);
-          }
-        }, 20);
-      });
-    }
-  });
-  </script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var startDate = new Date('2015-01-05T00:00:00');
+    var diffDays = Math.floor((Date.now() - startDate.getTime()) / 86400000);
+    var daysElem = document.getElementById('vcuDays');
 
-</body>
-</html>
+    if (daysElem) {
+      daysElem.setAttribute('data-countto', diffDays.toString());
+    }
+
+    var counters = Array.prototype.slice.call(document.querySelectorAll('[data-countto]'));
+    var duration = 1500;
+    var numberFormatter = new Intl.NumberFormat('en-US');
+    var currencyFormatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0
+    });
+
+    counters.forEach(function (el) {
+      var raw = el.getAttribute('data-countto') || '0';
+      var target = parseInt(raw.replace(/[^0-9]/g, ''), 10) || 0;
+      var useCurrency = raw.trim().indexOf('$') === 0;
+      var start = null;
+
+      function step(timestamp) {
+        if (!start) {
+          start = timestamp;
+        }
+
+        var progress = Math.min((timestamp - start) / duration, 1);
+        var value = Math.floor(target * progress);
+        el.textContent = useCurrency ? currencyFormatter.format(value) : numberFormatter.format(value);
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        }
+      }
+
+      window.requestAnimationFrame(step);
+    });
+  });
+</script>
