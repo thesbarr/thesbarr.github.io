@@ -14,7 +14,8 @@
   <meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description }}" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-  <meta property="og:image" content="{{ site.url }}{{ page.og_image | default: '/images/logo-dark.png' | relative_url }}" />
+  <meta property="og:image" content="{{ site.url }}{{ page.og_image | default: '/images/SBarr-Headshot-VCU.jpg' | relative_url }}" />
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
   <link rel="icon" href="{{ '/images/favicon.png' | relative_url }}" type="image/png" />
 
@@ -53,6 +54,21 @@
       gtag('config', '{{ site.google_analytics }}');
     </script>
   {% endif %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Stephen Barr",
+      "honorificSuffix": "Ed.D, CASP",
+      "url": "{{ site.url }}{{ page.url }}",
+      "image": "{{ site.url }}{{ '/images/SBarr-Headshot-VCU.jpg' | relative_url }}",
+      "jobTitle": "Director of Business Services",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Virginia Commonwealth University"
+      }
+    }
+  </script>
   <script>
     (function () {
       var toggle = document.querySelector('.heart-toggle');
