@@ -121,6 +121,7 @@
         'Moments matter in higher ed.',
         'Built for students, powered by people.'
       ];
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       var index = 0;
       toggle.addEventListener('click', function () {
@@ -128,6 +129,10 @@
         index += 1;
         toggle.setAttribute('aria-expanded', 'true');
         note.classList.add('is-visible');
+
+        if (prefersReducedMotion) {
+          return;
+        }
 
         clearTimeout(note._timeoutId);
         note._timeoutId = setTimeout(function () {

@@ -672,6 +672,31 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--vcu-black);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+
+  .hover-animate,
+  .beyond-section .hover-animate,
+  .heart-note,
+  .heart-toggle .fa-heart {
+    transition: none !important;
+  }
+
+  .hover-animate:hover,
+  .beyond-section .hover-animate:hover {
+    transform: none;
+    opacity: 1;
+  }
+
+  .heart-toggle:focus-visible .fa-heart,
+  .heart-toggle:hover .fa-heart {
+    transform: none;
+  }
+}
+
 /* ====================================================
    11. Mac Emulator
 ==================================================== */
