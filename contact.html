@@ -3,6 +3,8 @@ layout: default
 title: Contact Stephen Barr
 description: Contact Stephen Barr.
 body_class: contact-page
+scripts:
+  - /js/contact-form.js
 ---
 
 <section class="contact-section py-5">
@@ -15,36 +17,42 @@ body_class: contact-page
             Let’s connect — fill out the form below or reach out on LinkedIn.
           </p>
 
-          <form action="https://formspree.io/stephen@stephenabarr.com" method="POST">
+          <form class="contact-form" action="{{ site.formspree_endpoint | default: 'https://formspree.io/stephen@stephenabarr.com' }}" method="POST" accept-charset="UTF-8">
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
-              <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required />
+              <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" autocomplete="name" maxlength="120" required />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" name="email" id="email" class="form-control" placeholder="you@example.com" required />
+              <input type="email" name="email" id="email" class="form-control" placeholder="you@example.com" autocomplete="email" inputmode="email" maxlength="254" required />
             </div>
             <div class="mb-3">
               <label for="subject" class="form-label">Subject</label>
-              <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" />
+              <input type="text" name="subject" id="subject" class="form-control" placeholder="Subject" maxlength="140" />
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
-              <textarea name="message" id="message" rows="6" class="form-control" placeholder="Write your message here..." required></textarea>
+              <textarea name="message" id="message" rows="6" class="form-control" placeholder="Write your message here..." minlength="10" maxlength="2000" required></textarea>
             </div>
-            <input type="hidden" name="_next" value="{{ '/thank-you.html' | relative_url }}" />
-            <button type="submit" class="btn btn-primary w-100 mt-3">Send Message</button>
+            <div class="contact-honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" name="_gotcha" id="website" tabindex="-1" autocomplete="off" />
+            </div>
+            <input type="hidden" name="_subject" value="New message from stephenabarr.com" />
+            <input type="hidden" name="_next" value="{{ site.url }}{{ '/thank-you.html' | relative_url }}" />
+            <button type="submit" class="btn btn-primary w-100 mt-3 js-submit-button">Send Message</button>
+            <p class="contact-form-status text-center text-muted small mt-3 mb-0" aria-live="polite"></p>
           </form>
 
           <div class="text-center mt-4">
-            <a href="https://www.linkedin.com/in/stephenabarr/" target="_blank" rel="noopener" class="btn btn-outline-primary" aria-label="LinkedIn">
+            <a href="{{ site.linkedin_url | default: 'https://www.linkedin.com/in/stephenabarr/' }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="LinkedIn">
               <i class="fa fa-linkedin me-2"></i>Connect on LinkedIn
             </a>
           </div>
 
           <p class="text-center text-muted mt-4 small">
             Photo courtesy of
-            <a href="https://gratisography.com/photo/business-idea-background/" target="_blank" rel="noopener">Gratisography</a>
+            <a href="https://gratisography.com/photo/business-idea-background/" target="_blank" rel="noopener noreferrer">Gratisography</a>
           </p>
         </div>
       </div>
