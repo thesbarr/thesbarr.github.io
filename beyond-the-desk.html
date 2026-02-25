@@ -11,7 +11,7 @@ body_class: beyond-page
     <p class="text-muted text-center mb-5">Leadership, impact, and a little something extra</p>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 text-center justify-content-center gx-4 gy-5">
       <div class="col-md-6 col-lg-4">
-        <a href="https://nacas.org/about/regions/nacas-east/" class="text-decoration-none" target="_blank" rel="noopener">
+        <a href="https://nacas.org/about/regions/nacas-east/" class="text-decoration-none" target="_blank" rel="noopener noreferrer">
           <div class="card h-100 hover-animate">
             <picture>
               <source type="image/webp" srcset="{{ '/images/case-studies/beyond-board.webp' | relative_url }}" />
@@ -71,7 +71,7 @@ body_class: beyond-page
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <a href="https://nacas.org/member-benefits/casp/" class="text-decoration-none" target="_blank" rel="noopener">
+        <a href="https://nacas.org/member-benefits/casp/" class="text-decoration-none" target="_blank" rel="noopener noreferrer">
           <div class="card h-100 hover-animate">
             <picture>
               <source type="image/webp" srcset="{{ '/images/case-studies/beyond-casp.webp' | relative_url }}" />
@@ -86,7 +86,7 @@ body_class: beyond-page
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <a href="https://youtu.be/WX6vioW7SZc" class="text-decoration-none" target="_blank" rel="noopener">
+        <a href="https://youtu.be/WX6vioW7SZc" class="text-decoration-none" target="_blank" rel="noopener noreferrer">
           <div class="card h-100 hover-animate">
             <picture>
               <source type="image/webp" srcset="{{ '/images/case-studies/beyond-super.webp' | relative_url }}" />
@@ -131,7 +131,7 @@ body_class: beyond-page
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <a href="https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger" class="text-decoration-none" target="_blank" rel="noopener">
+        <a href="https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger" class="text-decoration-none" target="_blank" rel="noopener noreferrer">
           <div class="card h-100 hover-animate">
             <picture>
               <source type="image/webp" srcset="{{ '/images/case-studies/LRP - BSV.webp' | relative_url }}" />
@@ -161,7 +161,7 @@ body_class: beyond-page
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <a href="https://news.vcu.edu/article/2025/04/dining-services-has-a-full-menu-of-projects-focused-on-sustainability" class="text-decoration-none" target="_blank" rel="noopener">
+        <a href="https://news.vcu.edu/article/2025/04/dining-services-has-a-full-menu-of-projects-focused-on-sustainability" class="text-decoration-none" target="_blank" rel="noopener noreferrer">
           <div class="card h-100 hover-animate">
             <picture>
               <source type="image/webp" srcset="{{ '/images/sustainability.webp' | relative_url }}" />
@@ -178,7 +178,7 @@ body_class: beyond-page
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <a href="https://youtu.be/d5-8ZQ1isIg?si=X9mPug60js3Qr26H" class="text-decoration-none" target="_blank" rel="noopener">
+        <a href="https://youtu.be/d5-8ZQ1isIg?si=X9mPug60js3Qr26H" class="text-decoration-none" target="_blank" rel="noopener noreferrer">
           <div class="card h-100 hover-animate">
             <picture>
               <source type="image/webp" srcset="{{ '/images/case-studies/FCSI.webp' | relative_url }}" />
@@ -278,6 +278,7 @@ body_class: beyond-page
     }
 
     var counters = Array.prototype.slice.call(document.querySelectorAll('[data-countto]'));
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var duration = 1500;
     var numberFormatter = new Intl.NumberFormat('en-US');
     var currencyFormatter = new Intl.NumberFormat('en-US', {
@@ -291,6 +292,11 @@ body_class: beyond-page
       var target = parseInt(raw.replace(/[^0-9]/g, ''), 10) || 0;
       var useCurrency = raw.trim().indexOf('$') === 0;
       var start = null;
+
+      if (prefersReducedMotion) {
+        el.textContent = useCurrency ? currencyFormatter.format(target) : numberFormatter.format(target);
+        return;
+      }
 
       function step(timestamp) {
         if (!start) {
