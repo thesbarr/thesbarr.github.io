@@ -787,6 +787,22 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #e6a700;
   color: #000;
 }
+
+@media (max-width: 575.98px) {
+  .notfound-page .notfound-container {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .notfound-page .notfound-content h1 {
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+  }
+
+  .notfound-page .notfound-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
 /* ====================================================
    12. Legacy / Unused Components
 ==================================================== */
