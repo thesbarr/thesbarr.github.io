@@ -17,7 +17,11 @@ scripts:
             Let’s connect — fill out the form below or reach out on LinkedIn.
           </p>
 
-          <form class="contact-form" action="{{ site.formspree_endpoint | default: 'https://formspree.io/stephen@stephenabarr.com' }}" method="POST" accept-charset="UTF-8">
+          {% assign form_action = site.formspree_endpoint | default: 'https://formspree.io/stephen@stephenabarr.com' %}
+          {% if site.formspree_form_id and site.formspree_form_id != '' %}
+            {% assign form_action = 'https://formspree.io/f/' | append: site.formspree_form_id %}
+          {% endif %}
+          <form class="contact-form" action="{{ form_action }}" method="POST" accept-charset="UTF-8">
             <div class="mb-3">
               <label for="name" class="form-label">Name</label>
               <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" autocomplete="name" maxlength="120" required />

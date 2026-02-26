@@ -279,6 +279,67 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
+.home-highlight {
+  background: linear-gradient(180deg, #101820 0%, #162230 100%);
+  color: #fff;
+  padding: 2rem 0 2.5rem;
+}
+
+.home-highlight .highlight-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0.85rem;
+  padding: 1.25rem 1.25rem 1.4rem;
+}
+
+.highlight-kicker {
+  color: #f8b800;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-size: 0.8rem;
+}
+
+.highlight-title {
+  font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+  color: #fff;
+  margin: 0;
+}
+
+.highlight-meta {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+}
+
+.highlight-copy {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 62ch;
+}
+
+.highlight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.highlight-actions .btn-primary {
+  background-color: #f8b800;
+  border: 1px solid #f8b800;
+  color: #101820;
+  font-weight: 700;
+}
+
+.highlight-actions .btn-primary:hover,
+.highlight-actions .btn-primary:focus {
+  background-color: #e0a700;
+  border-color: #e0a700;
+  color: #101820;
+}
+
+.highlight-actions .btn-outline-light {
+  border-width: 1px;
+}
+
 @media (max-width: 768px) {
   .home-page .site-main {
     display: block;
@@ -310,6 +371,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .hero-quote {
     max-width: 100%;
+  }
+
+  .home-highlight {
+    padding-top: 1.25rem;
+    padding-bottom: 1.75rem;
   }
 }
 
