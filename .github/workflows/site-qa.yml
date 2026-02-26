@@ -1,0 +1,48 @@
+name: Site QA
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --offline --base ./_site --exclude-mail "./_site/**/*.html"
+          fail: true
+
+      - name: Validate HTML
+        uses: Cyb3r-Jak3/html5validator-action@v7.2.0
+        with:
+          root: _site
+          css: false
+          format: text
+
+      - name: Lighthouse mobile budget
+        run: npx -y @lhci/cli@0.14.x autorun --config=.lighthouserc.json

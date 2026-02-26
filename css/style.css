@@ -146,6 +146,31 @@ h1, h2, h3, h4, h5, h6 {
   color: #f8b800 !important;
 }
 
+@media (max-width: 991.98px) {
+  .navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+    padding: 0.55rem 0.7rem;
+  }
+
+  .navbar .navbar-collapse {
+    background: rgba(16, 24, 32, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.75rem;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .navbar .navbar-nav {
+    gap: 0.2rem;
+  }
+
+  .navbar .navbar-nav .nav-link {
+    padding: 0.65rem 0.35rem;
+    font-size: 1rem;
+    letter-spacing: 0.03em;
+  }
+}
+
 
 /* ====================================================
    5. Hero Banner
