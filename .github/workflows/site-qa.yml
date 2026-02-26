@@ -36,7 +36,7 @@ jobs:
       - name: Check internal links
         uses: lycheeverse/lychee-action@v2
         with:
-          args: --no-progress --offline --base ./_site "./_site/**/*.html"
+          args: --no-progress --offline --base "${{ github.workspace }}/_site" "./_site/**/*.html"
           fail: true
 
       - name: Validate HTML
