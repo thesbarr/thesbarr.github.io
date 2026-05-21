@@ -121,35 +121,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.interior-hero {
-  background:
-    linear-gradient(135deg, rgba(16, 24, 32, 0.98), rgba(16, 24, 32, 0.9)),
-    linear-gradient(90deg, rgba(248, 184, 0, 0.18), transparent 45%);
-  color: #fff;
-  padding: clamp(2rem, 4.5vw, 3.4rem) 1rem;
-}
-
-.interior-hero .container {
-  max-width: 980px;
-}
-
-.interior-eyebrow {
-  color: var(--vcu-gold);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.18rem;
-  margin-bottom: 0.75rem;
-  text-transform: uppercase;
-}
-
-.interior-hero h1 {
-  color: #fff;
-  font-size: clamp(1.55rem, 3vw, 2.55rem);
-  line-height: 1.16;
-  margin: 0;
-  max-width: 840px;
-}
-
 /* ====================================================
    4. Navbar
 ==================================================== */
