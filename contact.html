@@ -17,7 +17,7 @@ scripts:
             Let’s connect — fill out the form below or reach out on LinkedIn.
           </p>
 
-          {% assign form_action = site.formspree_endpoint | default: 'https://formspree.io/stephen@stephenabarr.com' %}
+          {% assign form_action = site.formspree_endpoint | default: 'https://formspree.io/f/stephen@stephenabarr.com' %}
           {% if site.formspree_form_id and site.formspree_form_id != '' %}
             {% assign form_action = 'https://formspree.io/f/' | append: site.formspree_form_id %}
           {% endif %}
@@ -48,9 +48,14 @@ scripts:
             <p class="contact-form-status text-center text-muted small mt-3 mb-0" aria-live="polite"></p>
           </form>
 
-          <div class="text-center mt-4">
-            <a href="{{ site.linkedin_url | default: 'https://www.linkedin.com/in/thesbarr/' }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" aria-label="LinkedIn">
-              <i class="fa fa-linkedin me-2"></i>Connect on LinkedIn
+          <div class="linkedin-connect mt-4">
+            <div>
+              <p class="linkedin-kicker mb-1">Professional Profile</p>
+              <h2 class="linkedin-title mb-1">Connect on LinkedIn</h2>
+              <p class="linkedin-copy mb-0">Follow Stephen's higher education leadership, campus services work, and professional updates.</p>
+            </div>
+            <a href="{{ site.linkedin_url | default: 'https://www.linkedin.com/in/thesbarr/' }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary linkedin-button" aria-label="Connect with Stephen Barr on LinkedIn">
+              <i class="fa fa-linkedin me-2"></i>View Profile
             </a>
           </div>
 
