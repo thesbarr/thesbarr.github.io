@@ -535,11 +535,31 @@ h1, h2, h3, h4, h5, h6 {
   padding: clamp(1.5rem, 3vw, 2.25rem);
 }
 
-.experience-section .card img {
+.experience-section .experience-media {
+  background: #fff;
+  border-right: 1px solid var(--vcu-line);
+  padding: 1rem;
+}
+
+.experience-section .experience-media picture {
+  border: 1px solid rgba(16, 24, 32, 0.18);
+  display: block;
+  height: 100%;
+}
+
+.experience-section .experience-media img {
+  border-radius: 0 !important;
   height: 100%;
   min-height: 320px;
   object-fit: cover;
   width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .experience-section .experience-media {
+    border-bottom: 1px solid var(--vcu-line);
+    border-right: 0;
+  }
 }
 
 .experience-section .job-title {
