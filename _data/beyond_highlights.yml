@@ -1,0 +1,154 @@
+- title: "VCU Saxbys Cafe"
+  category: "2026 · Campus Innovation"
+  description: "Helped bring a student-run cafe and experiential learning model to VCU’s School of Business."
+  url: "https://business.vcu.edu/news-and-events/news/vcus-new-saxbys-cafe-is-blending-lattes-with-learning.html"
+  external: true
+  image_webp: "/images/case-studies/beyond-saxbys.webp"
+  image_fallback: "/images/case-studies/beyond-saxbys.jpg"
+  image_alt: "Students working behind the counter at VCU’s Saxbys cafe"
+  width: 1000
+  height: 750
+
+- title: "NACAS Vice President Nomination"
+  category: "2026 · National Leadership"
+  description: "Nominated for vice president on the NACAS 2026–27 National Board of Directors slate."
+  url: "https://www.linkedin.com/posts/thesbarr_im-honored-to-be-nominated-for-vice-president-activity-7498747456113799169-7RBB"
+  external: true
+  image_webp: "/images/case-studies/beyond-nacas-vp.webp"
+  image_fallback: "/images/case-studies/beyond-nacas-vp.jpg"
+  image_alt: "NACAS 2026–27 National Board of Directors slate naming Stephen Barr as the vice president nominee"
+  width: 800
+  height: 838
+  contain: true
+
+- title: "Dining Services Sustainability"
+  category: "2025 · Sustainability"
+  description: "Highlighted composting, food-waste tracking, and other efforts building a greener VCU campus."
+  url: "https://news.vcu.edu/article/2025/04/dining-services-has-a-full-menu-of-projects-focused-on-sustainability"
+  external: true
+  image_webp: "/images/sustainability.webp"
+  image_fallback: "/images/sustainability.png"
+  image_alt: "VCU Dining sustainability projects"
+  width: 1129
+  height: 783
+
+- title: "The Art of Culinary Spaces"
+  category: "Thought Leadership"
+  description: "Discussed how campus dining spaces can foster community and connection at VCU."
+  url: "https://youtu.be/d5-8ZQ1isIg?si=X9mPug60js3Qr26H"
+  external: true
+  image_webp: "/images/case-studies/FCSI.webp"
+  image_fallback: "/images/case-studies/FCSI.png"
+  image_alt: "VCU Dining - The Art of Culinary Spaces Podcast"
+  width: 2258
+  height: 1270
+
+- title: "Little Ram Pantry"
+  category: "2024 · Student Support"
+  description: "Partnered to address food insecurity for students at VCU."
+  url: "https://news.vcu.edu/article/2024/03/vcu-business-services-joins-with-ram-pantry-to-combat-student-hunger"
+  external: true
+  image_webp: "/images/case-studies/LRP - BSV.webp"
+  image_fallback: "/images/case-studies/LRP - BSV.png"
+  image_alt: "Little Ram Pantry"
+  width: 3034
+  height: 2074
+
+- title: "VCU Grocery Store"
+  category: "Campus Innovation"
+  description: "Helped launch VCU’s first on-campus grocery store."
+  url: "/images/video/Grocery.mp4"
+  external: false
+  image_webp: "/images/case-studies/beyond-grocery.webp"
+  image_fallback: "/images/case-studies/beyond-grocery.jpg"
+  image_alt: "Grocery Store"
+  width: 1200
+  height: 795
+
+- title: "NACAS East Board"
+  category: "2021–22 · Association Leadership"
+  description: "NACAS East Board President, 2021–2022."
+  url: "https://nacas.org/about/regions/nacas-east/"
+  external: true
+  image_webp: "/images/case-studies/beyond-board.webp"
+  image_fallback: "/images/case-studies/beyond-board.jpg"
+  image_alt: "NACAS East Board"
+  width: 800
+  height: 600
+
+- title: "VCU Food Truck Festival"
+  category: "2019 · Student Engagement"
+  description: "Engaging students through food and fun on campus."
+  url: "/images/video/VCU Dine Food Truck Fest 2019.mp4"
+  external: false
+  image_webp: "/images/case-studies/beyond-foodtruck.webp"
+  image_fallback: "/images/case-studies/beyond-foodtruck.png"
+  image_alt: "Food Truck Festival"
+  width: 360
+  height: 270
+
+- title: "CASP Accreditation"
+  category: "Professional Credential"
+  description: "Certified Auxiliary Services Professional. A nationally recognized credential."
+  url: "https://nacas.org/member-benefits/casp/"
+  external: true
+  image_webp: "/images/case-studies/beyond-casp.webp"
+  image_fallback: "/images/case-studies/beyond-casp.jpg"
+  image_alt: "CASP Accreditation"
+  width: 800
+  height: 600
+
+- title: "Senator Warner Letter"
+  category: "Recognition"
+  description: "Commendation from U.S. Senator Mark Warner for our awards."
+  url: "/images/doc/PRSA - Warner Letter.pdf"
+  external: false
+  image_webp: "/images/case-studies/PRSA - Warner Letter.webp"
+  image_fallback: "/images/case-studies/PRSA - Warner Letter.jpg"
+  image_alt: "Senator Warner Letter"
+  width: 2550
+  height: 3300
+
+- title: "Team Player Recognition"
+  category: "Recognition"
+  description: "Acknowledged as a collaborative leader in campus services."
+  url: "/images/doc/beyond-teamplayer.pdf"
+  external: false
+  image_webp: "/images/case-studies/beyond-awards.webp"
+  image_fallback: "/images/case-studies/beyond-awards.png"
+  image_alt: "Team Player"
+  width: 360
+  height: 270
+
+- title: "Letter of Appreciation"
+  category: "Recognition"
+  description: "Recognition for impactful contributions and service."
+  url: "/images/doc/BarrLetterOfAppreciation.pdf"
+  external: false
+  image_webp: "/images/case-studies/beyond-letter.webp"
+  image_fallback: "/images/case-studies/beyond-letter.png"
+  image_alt: "Letter of Appreciation"
+  width: 1434
+  height: 1144
+
+- title: "Hurricane Katrina Response"
+  category: "2005 · Emergency Response"
+  description: "Led logistics for a field hospital at LSU during Hurricane Katrina."
+  url: "/images/doc/beyond-katrina-doc.pdf"
+  external: false
+  image_webp: "/images/case-studies/beyond-katrina.webp"
+  image_fallback: "/images/case-studies/beyond-katrina.jpg"
+  image_alt: "Katrina Hospital"
+  width: 800
+  height: 600
+
+- title: "Super Bowl XXXVIII"
+  category: "2004 · Event Operations"
+  description: "Served as crew chief for game operations and logistics."
+  url: "https://youtu.be/WX6vioW7SZc"
+  external: true
+  image_webp: "/images/case-studies/beyond-super.webp"
+  image_fallback: "/images/case-studies/beyond-super.jpg"
+  image_alt: "Super Bowl XXXVIII"
+  width: 800
+  height: 600

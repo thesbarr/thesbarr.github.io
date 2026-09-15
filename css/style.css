@@ -251,8 +251,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
   justify-content: flex-start;
-  margin-top: 1.75rem;
+  margin-top: 1.25rem;
 }
 
 .hero-actions .btn-primary {
@@ -266,6 +268,11 @@ h1, h2, h3, h4, h5, h6 {
 .hero-actions .btn-primary:focus {
   background-color: #e0a700;
   color: #101820;
+}
+
+.hero-actions .btn-outline-light {
+  background: rgba(255, 255, 255, 0.03);
+  font-weight: 600;
 }
 
 
@@ -388,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.45;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
   .home-page .site-main {
     display: block;
     overflow: visible;
@@ -517,6 +524,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Headings inside cards */
 .experience-card h3,
+.card h2,
 .card h3,
 .card h5 {
   color: var(--vcu-black);
@@ -531,6 +539,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #000;
 }
 
+.experience-section .card h2 {
+  font-size: 1.75rem;
+}
+
 .experience-section .card-body {
   padding: clamp(1.5rem, 3vw, 2.25rem);
 }
@@ -542,8 +554,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .experience-section .experience-media picture {
-  border: 2px solid rgba(16, 24, 32, 0.65);
-  box-shadow: inset 0 0 0 1px rgba(255, 180, 0, 0.18);
   display: block;
   height: 100%;
 }
@@ -601,6 +611,19 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.7;
 }
 
+.about-profile-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--vcu-gold);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
+
+.about-profile-link:hover,
+.about-profile-link:focus {
+  color: #765300;
+}
+
 .about-img {
   width: 100%;
   height: auto;
@@ -639,6 +662,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .beyond-section .card-body {
   padding: 0.9rem 0.9rem 1rem;
+}
+
+.beyond-section .card-kicker {
+  color: #765300;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  line-height: 1.3;
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
 }
 
 .beyond-section .card-title {
@@ -693,6 +726,13 @@ h1, h2, h3, h4, h5, h6 {
   .beyond-section .card-img-top {
     height: 145px;
   }
+}
+
+.counter-overlay .grant-counter {
+  font-size: clamp(2.15rem, 3vw, 2.9rem);
+  letter-spacing: -0.04em;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .counter-overlay {
