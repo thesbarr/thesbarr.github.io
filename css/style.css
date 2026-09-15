@@ -728,9 +728,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.counter-overlay .grant-counter {
-  font-size: clamp(2.15rem, 3vw, 2.9rem);
+.counter-overlay .display-3 {
+  font-size: clamp(2.15rem, 3.55vw, 3.2rem);
   letter-spacing: -0.04em;
+  line-height: 1.1;
   text-align: center;
   white-space: nowrap;
 }
