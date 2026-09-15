@@ -616,18 +616,41 @@ h1, h2, h3, h4, h5, h6 {
 /* ====================================================
    7. Beyond
 ==================================================== */
+.beyond-section .beyond-grid > .col > a {
+  display: block;
+  height: 100%;
+}
+
+.beyond-section .card {
+  margin-bottom: 0;
+  box-shadow: 0 10px 24px rgba(16, 24, 32, 0.08);
+}
+
 .beyond-section .card-img-top {
-  height: 220px;
+  height: 155px;
   object-fit: cover;
 }
 
+.beyond-section .card-img-contain {
+  background-color: #fff;
+  object-fit: contain;
+  padding: 0.35rem;
+}
+
+.beyond-section .card-body {
+  padding: 0.9rem 0.9rem 1rem;
+}
+
 .beyond-section .card-title {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
 }
 
 .beyond-section .card-text {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
   color: var(--vcu-muted);
 }
 
@@ -646,15 +669,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .beyond-section .card-title {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .beyond-section .card-text {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .beyond-section .card-body {
-    padding: 1rem 1rem 1.25rem;
+    padding: 0.9rem 0.9rem 1rem;
   }
 
   .counter-overlay .display-3 {
@@ -663,6 +686,12 @@ h1, h2, h3, h4, h5, h6 {
 
   .counter-overlay p {
     font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .beyond-section .card-img-top {
+    height: 145px;
   }
 }
 
